@@ -5,6 +5,7 @@ import { clients } from "@/data/clients";
 import { services, site, stats } from "@/data/site";
 import CaseCard from "@/components/CaseCard";
 import CtaBanner from "@/components/CtaBanner";
+import ServicesScroll from "@/components/ServicesScroll";
 import Marquee from "@/components/anim/Marquee";
 import MaskReveal from "@/components/anim/MaskReveal";
 import Reveal from "@/components/anim/Reveal";
@@ -159,31 +160,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services — ghosted list, active line lights up ember (inspo pattern) */}
+      {/* Services — scroll-driven: each line inks in with ember as it
+          travels up the viewport */}
       <section className="bg-ink">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 py-24 md:py-32 grid gap-12 lg:grid-cols-[1fr_2fr]">
           <Reveal>
             <span className="label-mono">[What we do]</span>
           </Reveal>
-          <Stagger step={0.1}>
-            {services.map((s) => (
-              <StaggerItem key={s.n}>
-                <div className="group border-b border-white/10 py-7">
-                  <div className="flex items-baseline gap-6">
-                    <span className="font-mono text-sm text-ash">{s.n}</span>
-                    <div>
-                      <h3 className="display text-3xl sm:text-4xl md:text-5xl text-white/30 group-hover:text-ember group-hover:translate-x-2 transition-all duration-300">
-                        {s.title}
-                      </h3>
-                      <p className="mt-3 text-sm text-ash max-w-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        {s.blurb}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </StaggerItem>
-            ))}
-          </Stagger>
+          <ServicesScroll services={services} />
         </div>
       </section>
 
