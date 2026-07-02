@@ -9,6 +9,20 @@ import Marquee from "@/components/anim/Marquee";
 import MaskReveal from "@/components/anim/MaskReveal";
 import Reveal from "@/components/anim/Reveal";
 import { Stagger, StaggerItem } from "@/components/anim/Stagger";
+import { ZoomParallax } from "@/components/ui/zoom-parallax";
+
+// Zoom-parallax showcase: real campaign assets first; branded placeholder
+// tiles hold the remaining slots until the client sends more visuals
+// (specs in IMAGE_SPECS.md).
+const showcase = [
+  { src: "/media/rumble-in-dar.jpeg", alt: "Rumble in Dar — boxing series created by Jackson Group" },
+  { src: "/media/pigabet-shinda-ndinga.jpeg", alt: "PigaBet Shinda Ndinga campaign" },
+  { src: "/media/placeholders/absa-epl.svg", alt: "ABSA EPL matchday activations" },
+  { src: "/media/placeholders/showmax-launch.svg", alt: "Showmax Tanzania market entry" },
+  { src: "/media/placeholders/10bet-africa.svg", alt: "10bet pan-African go-to-market" },
+  { src: "/media/placeholders/tamgo-rebrand.svg", alt: "TAMGO rebrand launch" },
+  { src: "/media/placeholders/yanga-unicef.svg", alt: "Yanga and UNICEF behaviour change partnership" },
+];
 
 export default function Home() {
   return (
@@ -87,9 +101,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured work — exactly the three tiles the client requested */}
+      {/* Featured work — zoom-parallax showcase, then the three tiles the
+          client requested */}
       <section className="bg-coal border-y border-white/10">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8 py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 pt-24 md:pt-32">
           <div className="flex items-end justify-between gap-6">
             <div>
               <Reveal>
@@ -108,7 +123,11 @@ export default function Home() {
               </Link>
             </Reveal>
           </div>
+        </div>
 
+        <ZoomParallax images={showcase} />
+
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 pb-24 md:pb-32">
           <Stagger className="mt-12 grid gap-5 md:grid-cols-3" step={0.12}>
             {featuredCases.map((cs) => (
               <StaggerItem key={cs.slug} className="h-full">
