@@ -27,9 +27,23 @@ const showcase = [
 export default function Home() {
   return (
     <>
-      {/* Hero — charcoal-to-ember gradient with numbered services, per inspo */}
-      <section className="hero-gradient">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8 pt-16 pb-24 md:pt-24 md:pb-32">
+      {/* Hero — charcoal-to-ember gradient with the Dar es Salaam skyline
+          blended into the background */}
+      <section className="hero-gradient relative overflow-hidden">
+        <Image
+          src="/media/dar-es-salaam-city.jpeg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[center_72%] opacity-45"
+        />
+        {/* Fades that melt the photo into the gradient: solid ink at the
+            top (nav zone), ember glow pooling at the bottom */}
+        <div className="absolute inset-0 bg-gradient-to-b from-ink via-ink/55 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ember/70 via-transparent to-transparent" />
+
+        <div className="relative mx-auto max-w-7xl px-5 sm:px-8 pt-16 pb-24 md:pt-24 md:pb-32">
           <Stagger className="hidden md:block font-mono text-sm space-y-1.5" step={0.06}>
             {services.map((s, i) => (
               <StaggerItem key={s.n}>
