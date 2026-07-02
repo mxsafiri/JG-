@@ -16,12 +16,12 @@ import { ZoomParallax } from "@/components/ui/zoom-parallax";
 // (specs in IMAGE_SPECS.md).
 const showcase = [
   { src: "/media/rumble-in-dar.jpeg", alt: "Rumble in Dar — boxing series created by Jackson Group" },
+  { src: "/media/showmax-hatma.jpeg", alt: "HATMA on Showmax — Tanzania launch campaign" },
   { src: "/media/pigabet-shinda-ndinga.jpeg", alt: "PigaBet Shinda Ndinga campaign" },
+  { src: "/media/yanga-unicef.jpeg", alt: "Yanga and UNICEF partnership unveiling" },
   { src: "/media/placeholders/absa-epl.svg", alt: "ABSA EPL matchday activations" },
-  { src: "/media/placeholders/showmax-launch.svg", alt: "Showmax Tanzania market entry" },
-  { src: "/media/placeholders/10bet-africa.svg", alt: "10bet pan-African go-to-market" },
+  { src: "/media/10bet-dodoma.png", alt: "10bet Dodoma Jiji sponsorship campaign" },
   { src: "/media/placeholders/tamgo-rebrand.svg", alt: "TAMGO rebrand launch" },
-  { src: "/media/placeholders/yanga-unicef.svg", alt: "Yanga and UNICEF behaviour change partnership" },
 ];
 
 export default function Home() {

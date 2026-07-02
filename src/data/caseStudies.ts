@@ -62,6 +62,7 @@ export const caseStudies: CaseStudy[] = [
     region: "Tanzania",
     summary:
       "Entering a competitive streaming market is hard enough — doing it in a way that feels genuinely local is harder. When Showmax launched in Tanzania, we built and executed their full market entry strategy: ATL and BTL campaigns to drive awareness at scale, localised content promotions calibrated to Tanzanian tastes, and a network of influencer partnerships and grassroots activations to build word-of-mouth that advertising can't buy. Every touchpoint was designed to make Showmax feel like it belonged here from day one.",
+    image: "/media/showmax-hatma.jpeg",
   },
   {
     slug: "mua-insurance",
@@ -80,6 +81,7 @@ export const caseStudies: CaseStudy[] = [
     region: "9 Markets",
     summary:
       "10bet had ambitious plans to enter Africa across nine markets. They needed a partner who understood that Africa is not one market. We built the full Pan-African go-to-market playbook — market entry plans, financial projections, product mix recommendations, and a sponsorship strategy that put 10bet on the front of six premier league shirts across Zambia, Ghana, and Nigeria. We launched four markets by Q4 2022.",
+    image: "/media/10bet-dodoma.png",
   },
   {
     slug: "africa-football-league",
@@ -98,6 +100,7 @@ export const caseStudies: CaseStudy[] = [
     region: "Tanzania",
     summary:
       "Young Africans SC is more than a football club — it is one of the most trusted community institutions in Tanzania. We manage Yanga's commercial marketing globally, brokering a partnership between UNICEF and Yanga SC to deliver behaviour change campaigns including Covid-19 vaccination awareness and Ebola prevention messaging. The club's reach across radio, TV, and social media made it the ideal vehicle for the message.",
+    image: "/media/yanga-unicef.jpeg",
   },
   {
     slug: "rumble-in-dar",

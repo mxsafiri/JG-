@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { services, site, stats } from "@/data/site";
 import CtaBanner from "@/components/CtaBanner";
 import MaskReveal from "@/components/anim/MaskReveal";
@@ -25,6 +26,25 @@ export default function AboutPage() {
           <Reveal delay={0.35}>
             <p className="mt-8 text-lg text-white/80 max-w-2xl leading-relaxed">
               {site.description}
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Home turf — Dar es Salaam by night, already in brand colors */}
+      <section className="bg-ink">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 pb-4">
+          <Reveal y={48} className="relative">
+            <Image
+              src="/media/dar-es-salaam-city.jpeg"
+              alt="Dar es Salaam city centre at night"
+              width={720}
+              height={879}
+              className="w-full max-h-[70vh] object-cover object-center"
+              priority
+            />
+            <p className="mt-3 font-mono text-xs text-ash">
+              [Dar es Salaam — home base, working across Africa]
             </p>
           </Reveal>
         </div>
