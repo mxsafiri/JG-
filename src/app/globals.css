@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  /* Palette lifted from the approved inspiration (Novaform concept) —
+     matches Jackson Group's black/orange identity */
+  --color-ink: #191917;
+  --color-coal: #0f0f0e;
+  --color-ember: #ef6a25;
+  --color-ash: #535351;
+  --color-bone: #f4f2ee;
+
+  --font-sans: var(--font-instrument), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-anton), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-space-mono), ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-ink);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-ember);
+  color: #ffffff;
+}
+
+/* Big display headlines, as in the inspo */
+.display {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+}
+
+/* Small monospace section labels: [Our Work] */
+.label-mono {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  color: var(--color-ash);
+}
+
+/* Hero gradient — charcoal melting into ember, per inspo */
+.hero-gradient {
+  background: linear-gradient(
+    170deg,
+    var(--color-ink) 0%,
+    #2a1a10 32%,
+    #a04318 62%,
+    var(--color-ember) 100%
+  );
+}
+
+.cta-gradient {
+  background:
+    radial-gradient(120% 160% at 85% 100%, rgba(239, 106, 37, 0.55) 0%, rgba(239, 106, 37, 0) 55%),
+    var(--color-coal);
+}
