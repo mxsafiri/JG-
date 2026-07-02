@@ -57,6 +57,29 @@ body {
   );
 }
 
+/* Infinite logo marquee */
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation: marquee-scroll 36s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 .cta-gradient {
   background:
     radial-gradient(120% 160% at 85% 100%, rgba(239, 106, 37, 0.55) 0%, rgba(239, 106, 37, 0) 55%),

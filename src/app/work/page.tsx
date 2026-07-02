@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { caseStudies } from "@/data/caseStudies";
 import CaseCard from "@/components/CaseCard";
 import CtaBanner from "@/components/CtaBanner";
+import MaskReveal from "@/components/anim/MaskReveal";
+import Reveal from "@/components/anim/Reveal";
+import { Stagger, StaggerItem } from "@/components/anim/Stagger";
 
 export const metadata: Metadata = {
   title: "Our Work",
@@ -14,24 +17,31 @@ export default function WorkPage() {
     <>
       <section className="bg-ink">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 pt-20 pb-16 md:pt-28 md:pb-24">
-          <span className="label-mono">[Our Work]</span>
+          <Reveal>
+            <span className="label-mono">[Our Work]</span>
+          </Reveal>
           <h1 className="display text-5xl sm:text-6xl md:text-7xl mt-4 max-w-4xl">
-            22 client stories. Measurable impact across Africa.
+            <MaskReveal delay={0.1}>22 client stories.</MaskReveal>
+            <MaskReveal delay={0.22}>Measurable impact across Africa.</MaskReveal>
           </h1>
-          <p className="mt-8 text-lg text-white/70 max-w-2xl">
-            A selection of the work — from market entries and rebrands to
-            sports properties we built from scratch.
-          </p>
+          <Reveal delay={0.35}>
+            <p className="mt-8 text-lg text-white/70 max-w-2xl">
+              A selection of the work — from market entries and rebrands to
+              sports properties we built from scratch.
+            </p>
+          </Reveal>
         </div>
       </section>
 
       <section className="bg-coal border-t border-white/10">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 py-20 md:py-28">
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <Stagger className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3" step={0.07}>
             {caseStudies.map((cs) => (
-              <CaseCard key={cs.slug} cs={cs} />
+              <StaggerItem key={cs.slug} className="h-full">
+                <CaseCard cs={cs} />
+              </StaggerItem>
             ))}
-          </div>
+          </Stagger>
         </div>
       </section>
 

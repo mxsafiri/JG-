@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { services, site, stats } from "@/data/site";
 import CtaBanner from "@/components/CtaBanner";
+import MaskReveal from "@/components/anim/MaskReveal";
+import Reveal from "@/components/anim/Reveal";
+import { Stagger, StaggerItem } from "@/components/anim/Stagger";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -12,20 +15,27 @@ export default function AboutPage() {
     <>
       <section className="bg-ink">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 pt-20 pb-16 md:pt-28 md:pb-24">
-          <span className="label-mono">[About Us]</span>
+          <Reveal>
+            <span className="label-mono">[About Us]</span>
+          </Reveal>
           <h1 className="display text-5xl sm:text-6xl md:text-7xl mt-4 max-w-5xl">
-            Pan-African brand, marketing &amp; growth consultancy
+            <MaskReveal delay={0.1}>Pan-African brand, marketing</MaskReveal>
+            <MaskReveal delay={0.22}>&amp; growth consultancy</MaskReveal>
           </h1>
-          <p className="mt-8 text-lg text-white/80 max-w-2xl leading-relaxed">
-            {site.description}
-          </p>
+          <Reveal delay={0.35}>
+            <p className="mt-8 text-lg text-white/80 max-w-2xl leading-relaxed">
+              {site.description}
+            </p>
+          </Reveal>
         </div>
       </section>
 
       <section className="bg-coal border-y border-white/10">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 py-20 md:py-28 grid gap-12 lg:grid-cols-[1fr_2fr]">
-          <span className="label-mono">[Independent. Boutique. Africa-first.]</span>
-          <div className="space-y-6 text-lg text-white/80 leading-relaxed max-w-2xl">
+          <Reveal>
+            <span className="label-mono">[Independent. Boutique. Africa-first.]</span>
+          </Reveal>
+          <Reveal delay={0.15} className="space-y-6 text-lg text-white/80 leading-relaxed max-w-2xl">
             <p>
               We are a senior-led marketing and growth consultancy with over 20
               years of experience building brands across Africa. We work with a
@@ -47,16 +57,18 @@ export default function AboutPage() {
                 </div>
               ))}
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       <section id="services" className="bg-ink scroll-mt-16">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 py-20 md:py-28 grid gap-12 lg:grid-cols-[1fr_2fr]">
-          <span className="label-mono">[What we do]</span>
-          <div>
+          <Reveal>
+            <span className="label-mono">[What we do]</span>
+          </Reveal>
+          <Stagger step={0.1}>
             {services.map((s) => (
-              <div key={s.n} className="border-b border-white/10 py-8">
+              <StaggerItem key={s.n} className="border-b border-white/10 py-8">
                 <div className="flex items-baseline gap-6">
                   <span className="font-mono text-sm text-ash">{s.n}</span>
                   <div>
@@ -64,9 +76,9 @@ export default function AboutPage() {
                     <p className="mt-3 text-white/70 max-w-xl leading-relaxed">{s.blurb}</p>
                   </div>
                 </div>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </Stagger>
         </div>
       </section>
 

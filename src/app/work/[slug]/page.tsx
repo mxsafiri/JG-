@@ -4,6 +4,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { caseStudies, getCase } from "@/data/caseStudies";
 import CtaBanner from "@/components/CtaBanner";
+import MaskReveal from "@/components/anim/MaskReveal";
+import Reveal from "@/components/anim/Reveal";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -34,28 +36,38 @@ export default async function CaseStudyPage({ params }: Props) {
     <>
       <section className="bg-ink">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 pt-20 pb-16 md:pt-28 md:pb-24">
-          <div className="flex items-center gap-4 font-mono text-sm text-ash">
-            <Link href="/work" className="hover:text-ember transition-colors">
-              ← Our Work
-            </Link>
-            <span>{cs.index}</span>
-          </div>
-          <h1 className="display text-5xl sm:text-6xl md:text-7xl mt-6">{cs.client}</h1>
-          <p className="mt-6 font-mono text-xs uppercase tracking-wide text-ember">
-            {cs.tags.join(" · ")} · {cs.region}
-          </p>
+          <Reveal>
+            <div className="flex items-center gap-4 font-mono text-sm text-ash">
+              <Link href="/work" className="hover:text-ember transition-colors">
+                ← Our Work
+              </Link>
+              <span>{cs.index}</span>
+            </div>
+          </Reveal>
+          <h1 className="display text-5xl sm:text-6xl md:text-7xl mt-6">
+            <MaskReveal delay={0.1}>{cs.client}</MaskReveal>
+          </h1>
+          <Reveal delay={0.25}>
+            <p className="mt-6 font-mono text-xs uppercase tracking-wide text-ember">
+              {cs.tags.join(" · ")} · {cs.region}
+            </p>
+          </Reveal>
         </div>
       </section>
 
       <section className="bg-coal border-t border-white/10">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 py-20 md:py-28 grid gap-12 lg:grid-cols-[1fr_2fr]">
-          <span className="label-mono">[The story]</span>
+          <Reveal>
+            <span className="label-mono">[The story]</span>
+          </Reveal>
           <div>
-            <p className="text-xl md:text-2xl text-white/85 leading-relaxed max-w-3xl">
-              {cs.summary}
-            </p>
+            <Reveal delay={0.1}>
+              <p className="text-xl md:text-2xl text-white/85 leading-relaxed max-w-3xl">
+                {cs.summary}
+              </p>
+            </Reveal>
             {cs.image && (
-              <div className="mt-14 relative max-w-2xl">
+              <Reveal y={48} className="mt-14 relative max-w-2xl">
                 <Image
                   src={cs.image}
                   alt={`${cs.client} campaign creative`}
@@ -64,7 +76,7 @@ export default async function CaseStudyPage({ params }: Props) {
                   className="w-full h-auto"
                 />
                 <p className="mt-3 font-mono text-xs text-ash">[Campaign creative — {cs.client}]</p>
-              </div>
+              </Reveal>
             )}
           </div>
         </div>

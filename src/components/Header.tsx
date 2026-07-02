@@ -1,17 +1,34 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { nav, site } from "@/data/site";
 import Logo from "@/components/Logo";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const pathname = usePathname();
 
+  // Hide on scroll down, reappear on scroll up
+  useEffect(() => {
+    let last = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      setHidden(y > last && y > 120);
+      last = y;
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 bg-ink/95 backdrop-blur border-b border-white/10">
+    <header
+      className={`sticky top-0 z-50 bg-ink/95 backdrop-blur border-b border-white/10 transition-transform duration-300 ${
+        hidden && !open ? "-translate-y-full" : "translate-y-0"
+      }`}
+    >
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="flex h-16 items-center justify-between gap-6">
           <Logo />
