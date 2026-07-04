@@ -37,12 +37,13 @@ export default function Home() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center opacity-30"
+          className="object-cover object-center opacity-70"
         />
-        {/* Fades that melt the photo into the light canvas: white at the
-            top (nav zone), a soft ember pool at the base */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/70 to-white/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ember/25 via-transparent to-transparent" />
+        {/* Keep the left text zone readable, let the skyline emerge on the
+            right; light veil at the top for the nav */}
+        <div className="absolute inset-0 bg-gradient-to-r from-bone via-bone/75 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-bone/90 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ember/20 via-transparent to-transparent" />
 
         <div className="relative mx-auto max-w-7xl px-5 sm:px-8 pt-24 pb-24 md:pt-36 md:pb-32">
           <Reveal>
