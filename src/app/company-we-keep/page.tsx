@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function CompanyWeKeepPage() {
   return (
     <>
-      <section className="bg-ink">
+      <section>
         <div className="mx-auto max-w-7xl px-5 sm:px-8 pt-20 pb-16 md:pt-28 md:pb-24">
           <Reveal>
             <span className="label-mono">[The Company We Keep]</span>
@@ -23,7 +23,7 @@ export default function CompanyWeKeepPage() {
             <MaskReveal delay={0.1}>The company we keep</MaskReveal>
           </h1>
           <Reveal delay={0.25}>
-            <p className="mt-8 text-lg text-white/70 max-w-2xl leading-relaxed">
+            <p className="mt-8 text-lg text-ink/70 max-w-2xl leading-relaxed">
               We work with leading brands across finance, telecoms, iGaming,
               government, and sports.
             </p>
@@ -31,7 +31,7 @@ export default function CompanyWeKeepPage() {
         </div>
       </section>
 
-      <section className="bg-white text-ink">
+      <section className="bg-white border-t border-ink/10">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 py-20 md:py-28">
           <LogoWall items={clients} />
         </div>

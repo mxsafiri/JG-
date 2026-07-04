@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function WorkPage() {
   return (
     <>
-      <section className="bg-ink">
+      <section>
         <div className="mx-auto max-w-7xl px-5 sm:px-8 pt-20 pb-16 md:pt-28 md:pb-24">
           <Reveal>
             <span className="label-mono">[Our Work]</span>
@@ -25,7 +25,7 @@ export default function WorkPage() {
             <MaskReveal delay={0.22}>Measurable impact across Africa.</MaskReveal>
           </h1>
           <Reveal delay={0.35}>
-            <p className="mt-8 text-lg text-white/70 max-w-2xl">
+            <p className="mt-8 text-lg text-ink/70 max-w-2xl">
               A selection of the work — from market entries and rebrands to
               sports properties we built from scratch.
             </p>
@@ -33,7 +33,7 @@ export default function WorkPage() {
         </div>
       </section>
 
-      <section className="bg-coal border-t border-white/10">
+      <section className="bg-[#f1efea] border-t border-ink/10">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 py-20 md:py-28">
           <Stagger className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3" step={0.07}>
             {caseStudies.map((cs) => (

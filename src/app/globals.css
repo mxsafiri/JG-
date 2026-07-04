@@ -19,8 +19,9 @@ html {
 }
 
 body {
-  background: var(--color-ink);
-  color: #ffffff;
+  /* Light greyscale canvas with ember as the single accent, per client */
+  background: var(--color-bone);
+  color: var(--color-ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
 }
@@ -46,15 +47,11 @@ body {
   color: var(--color-ash);
 }
 
-/* Hero gradient — charcoal melting into ember, per inspo */
+/* Hero — light greyscale with a soft ember pool at the base */
 .hero-gradient {
-  background: linear-gradient(
-    170deg,
-    var(--color-ink) 0%,
-    #2a1a10 32%,
-    #a04318 62%,
-    var(--color-ember) 100%
-  );
+  background:
+    radial-gradient(110% 90% at 80% 110%, rgba(239, 106, 37, 0.22) 0%, rgba(239, 106, 37, 0) 55%),
+    linear-gradient(170deg, #ffffff 0%, var(--color-bone) 55%, #e9e6e0 100%);
 }
 
 /* Infinite logo marquee */
@@ -82,6 +79,6 @@ body {
 
 .cta-gradient {
   background:
-    radial-gradient(120% 160% at 85% 100%, rgba(239, 106, 37, 0.55) 0%, rgba(239, 106, 37, 0) 55%),
-    var(--color-coal);
+    radial-gradient(120% 160% at 85% 100%, rgba(239, 106, 37, 0.28) 0%, rgba(239, 106, 37, 0) 55%),
+    #eceae5;
 }

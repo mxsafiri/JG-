@@ -25,7 +25,7 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 bg-ink/95 backdrop-blur border-b border-white/10 transition-transform duration-300 ${
+      className={`sticky top-0 z-50 bg-bone/95 backdrop-blur border-b border-ink/10 transition-transform duration-300 ${
         hidden && !open ? "-translate-y-full" : "translate-y-0"
       }`}
     >
@@ -43,7 +43,7 @@ export default function Header() {
                   key={item.href}
                   href={item.href}
                   className={`font-mono text-sm transition-colors hover:text-ember ${
-                    active ? "text-ember" : "text-white"
+                    active ? "text-ember" : "text-ink"
                   }`}
                 >
                   {item.label}
@@ -54,7 +54,7 @@ export default function Header() {
 
           <a
             href={`mailto:${site.email}`}
-            className="hidden lg:block font-mono text-sm text-ash hover:text-white transition-colors"
+            className="hidden lg:block font-mono text-sm text-ash hover:text-ink transition-colors"
           >
             {site.email}
           </a>
@@ -67,24 +67,24 @@ export default function Header() {
             aria-label="Toggle menu"
           >
             <span
-              className={`block h-0.5 w-6 bg-white transition-transform ${open ? "translate-y-2 rotate-45" : ""}`}
+              className={`block h-0.5 w-6 bg-ink transition-transform ${open ? "translate-y-2 rotate-45" : ""}`}
             />
-            <span className={`block h-0.5 w-6 bg-white ${open ? "opacity-0" : ""}`} />
+            <span className={`block h-0.5 w-6 bg-ink ${open ? "opacity-0" : ""}`} />
             <span
-              className={`block h-0.5 w-6 bg-white transition-transform ${open ? "-translate-y-2 -rotate-45" : ""}`}
+              className={`block h-0.5 w-6 bg-ink transition-transform ${open ? "-translate-y-2 -rotate-45" : ""}`}
             />
           </button>
         </div>
       </div>
 
       {open && (
-        <nav className="lg:hidden border-t border-white/10 bg-ink px-5 py-6 flex flex-col gap-5">
+        <nav className="lg:hidden border-t border-ink/10 bg-bone px-5 py-6 flex flex-col gap-5">
           {nav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               onClick={() => setOpen(false)}
-              className="font-mono text-base text-white hover:text-ember transition-colors"
+              className="font-mono text-base text-ink hover:text-ember transition-colors"
             >
               {item.label}
             </Link>

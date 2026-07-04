@@ -11,7 +11,7 @@ export default function Logo({ className = "" }: { className?: string }) {
       aria-label="Jackson Group — home"
     >
       <span className="text-ember">JACKSON</span>
-      <span className="text-white">GROUP</span>
+      <span className="text-ink">GROUP</span>
     </Link>
   );
 }

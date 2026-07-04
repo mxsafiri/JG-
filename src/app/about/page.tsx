@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <section className="bg-ink">
+      <section>
         <div className="mx-auto max-w-7xl px-5 sm:px-8 pt-20 pb-16 md:pt-28 md:pb-24">
           <Reveal>
             <span className="label-mono">[About Us]</span>
@@ -23,19 +23,19 @@ export default function AboutPage() {
             <MaskReveal delay={0.22}>&amp; growth consultancy</MaskReveal>
           </h1>
           <Reveal delay={0.35}>
-            <p className="mt-8 text-lg text-white/80 max-w-2xl leading-relaxed">
+            <p className="mt-8 text-lg text-ink/80 max-w-2xl leading-relaxed">
               {site.description}
             </p>
           </Reveal>
         </div>
       </section>
 
-      <section className="bg-coal border-y border-white/10">
+      <section className="bg-[#f1efea] border-y border-ink/10">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 py-20 md:py-28 grid gap-12 lg:grid-cols-[1fr_2fr]">
           <Reveal>
             <span className="label-mono">[Independent. Boutique. Africa-first.]</span>
           </Reveal>
-          <Reveal delay={0.15} className="space-y-6 text-lg text-white/80 leading-relaxed max-w-2xl">
+          <Reveal delay={0.15} className="space-y-6 text-lg text-ink/80 leading-relaxed max-w-2xl">
             <p>
               We are a senior-led marketing and growth consultancy with over 20
               years of experience building brands across Africa. We work with a
@@ -61,19 +61,19 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section id="services" className="bg-ink scroll-mt-16">
+      <section id="services" className="scroll-mt-16">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 py-20 md:py-28 grid gap-12 lg:grid-cols-[1fr_2fr]">
           <Reveal>
             <span className="label-mono">[What we do]</span>
           </Reveal>
           <Stagger step={0.1}>
             {services.map((s) => (
-              <StaggerItem key={s.n} className="border-b border-white/10 py-8">
+              <StaggerItem key={s.n} className="border-b border-ink/10 py-8">
                 <div className="flex items-baseline gap-6">
                   <span className="font-mono text-sm text-ash">{s.n}</span>
                   <div>
                     <h2 className="display text-3xl sm:text-4xl">{s.title}</h2>
-                    <p className="mt-3 text-white/70 max-w-xl leading-relaxed">{s.blurb}</p>
+                    <p className="mt-3 text-ink/70 max-w-xl leading-relaxed">{s.blurb}</p>
                   </div>
                 </div>
               </StaggerItem>

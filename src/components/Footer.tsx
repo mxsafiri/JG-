@@ -4,7 +4,7 @@ import Logo from "@/components/Logo";
 
 export default function Footer() {
   return (
-    <footer className="bg-coal border-t border-white/10">
+    <footer className="bg-[#eceae5] border-t border-ink/10">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 py-14">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
@@ -20,7 +20,7 @@ export default function Footer() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm text-white/80 hover:text-ember transition-colors w-fit"
+                className="text-sm text-ink/80 hover:text-ember transition-colors w-fit"
               >
                 {item.label}
               </Link>
@@ -29,10 +29,10 @@ export default function Footer() {
 
           <div className="flex flex-col gap-3">
             <span className="label-mono">[Contact]</span>
-            <a href={`mailto:${site.email}`} className="text-sm text-white/80 hover:text-ember transition-colors w-fit">
+            <a href={`mailto:${site.email}`} className="text-sm text-ink/80 hover:text-ember transition-colors w-fit">
               {site.email}
             </a>
-            <a href={`tel:${site.phone.replace(/\s/g, "")}`} className="text-sm text-white/80 hover:text-ember transition-colors w-fit">
+            <a href={`tel:${site.phone.replace(/\s/g, "")}`} className="text-sm text-ink/80 hover:text-ember transition-colors w-fit">
               {site.phone}
             </a>
             <p className="text-sm text-ash">{site.address}</p>
@@ -47,7 +47,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-2">
+        <div className="mt-12 pt-6 border-t border-ink/10 flex flex-col sm:flex-row justify-between gap-2">
           <p className="font-mono text-xs text-ash">
             © {new Date().getFullYear()} Jackson Group. All rights reserved.
           </p>

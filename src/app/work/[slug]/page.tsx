@@ -34,7 +34,7 @@ export default async function CaseStudyPage({ params }: Props) {
 
   return (
     <>
-      <section className="bg-ink">
+      <section>
         <div className="mx-auto max-w-7xl px-5 sm:px-8 pt-20 pb-16 md:pt-28 md:pb-24">
           <Reveal>
             <div className="flex items-center gap-4 font-mono text-sm text-ash">
@@ -55,14 +55,14 @@ export default async function CaseStudyPage({ params }: Props) {
         </div>
       </section>
 
-      <section className="bg-coal border-t border-white/10">
+      <section className="bg-[#f1efea] border-t border-ink/10">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 py-20 md:py-28 grid gap-12 lg:grid-cols-[1fr_2fr]">
           <Reveal>
             <span className="label-mono">[The story]</span>
           </Reveal>
           <div>
             <Reveal delay={0.1}>
-              <p className="text-xl md:text-2xl text-white/85 leading-relaxed max-w-3xl">
+              <p className="text-xl md:text-2xl text-ink/85 leading-relaxed max-w-3xl">
                 {cs.summary}
               </p>
             </Reveal>
@@ -82,12 +82,12 @@ export default async function CaseStudyPage({ params }: Props) {
         </div>
       </section>
 
-      <section className="bg-ink border-t border-white/10">
+      <section className="border-t border-ink/10">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 py-10 flex justify-between font-mono text-sm">
-          <Link href={`/work/${prev.slug}`} className="text-white/70 hover:text-ember transition-colors">
+          <Link href={`/work/${prev.slug}`} className="text-ink/60 hover:text-ember transition-colors">
             ← {prev.client}
           </Link>
-          <Link href={`/work/${next.slug}`} className="text-white/70 hover:text-ember transition-colors text-right">
+          <Link href={`/work/${next.slug}`} className="text-ink/60 hover:text-ember transition-colors text-right">
             {next.client} →
           </Link>
         </div>

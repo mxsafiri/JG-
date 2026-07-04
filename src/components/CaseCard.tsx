@@ -9,7 +9,7 @@ export default function CaseCard({ cs }: { cs: CaseStudy }) {
   return (
     <Link
       href={`/work/${cs.slug}`}
-      className="group relative flex h-full flex-col justify-between overflow-hidden bg-coal border border-white/10 hover:border-ember transition-colors duration-300 min-h-72 p-6"
+      className="group relative flex h-full flex-col justify-between overflow-hidden bg-white border border-ink/10 hover:border-ember transition-colors duration-300 min-h-72 p-6"
     >
       {cs.image && (
         <>
@@ -18,9 +18,9 @@ export default function CaseCard({ cs }: { cs: CaseStudy }) {
             alt={cs.client}
             fill
             sizes="(max-width: 768px) 100vw, 33vw"
-            className="object-cover opacity-40 group-hover:opacity-25 group-hover:scale-105 transition-all duration-700 ease-out"
+            className="object-cover opacity-90 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-coal via-coal/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent" />
         </>
       )}
 

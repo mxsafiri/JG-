@@ -14,7 +14,7 @@ export default function CtaBanner() {
             <MaskReveal delay={0.12}>Business Together</MaskReveal>
           </h2>
           <Reveal delay={0.25}>
-            <p className="mt-5 text-white/80 text-lg max-w-xl">
+            <p className="mt-5 text-ink/70 text-lg max-w-xl">
               Tell us about your goals and we&rsquo;ll help you achieve them.
             </p>
           </Reveal>
@@ -22,7 +22,7 @@ export default function CtaBanner() {
         <Reveal delay={0.3} y={16}>
           <Link
             href="/contact"
-            className="group shrink-0 inline-flex items-center gap-3 bg-ember text-white font-mono text-sm px-8 py-4 hover:bg-white hover:text-ink transition-colors duration-300"
+            className="group shrink-0 inline-flex items-center gap-3 bg-ember text-white font-mono text-sm px-8 py-4 hover:bg-ink hover:text-white transition-colors duration-300"
           >
             Get in Touch{" "}
             <span aria-hidden className="group-hover:translate-x-1 transition-transform duration-300">

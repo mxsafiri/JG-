@@ -23,7 +23,7 @@ export default function ContactPage() {
             <MaskReveal delay={0.22}>business together</MaskReveal>
           </h1>
           <Reveal delay={0.35}>
-            <p className="mt-8 text-lg text-white/80 max-w-md leading-relaxed">
+            <p className="mt-8 text-lg text-ink/80 max-w-md leading-relaxed">
               Tell us about your goals and we&rsquo;ll help you achieve them.
               Whether you are entering a new market, repositioning a brand, or
               looking to unlock growth — our team is ready to help.
@@ -53,7 +53,7 @@ export default function ContactPage() {
         {/* Per client feedback: the data-collection side goes light/white,
             the left stays dark */}
         <Reveal delay={0.3} y={40}>
-          <div className="bg-white text-ink p-6 sm:p-10 lg:mt-6">
+          <div className="bg-white border border-ink/10 p-6 sm:p-10 lg:mt-6">
             <ContactForm />
           </div>
         </Reveal>

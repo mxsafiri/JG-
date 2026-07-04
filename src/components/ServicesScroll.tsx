@@ -37,7 +37,7 @@ function Row({ s }: { s: Service }) {
   );
 
   return (
-    <li ref={ref} className="border-b border-white/10 py-7">
+    <li ref={ref} className="border-b border-ink/10 py-7">
       <div className="flex items-baseline gap-6">
         <motion.span
           className="font-mono text-sm"
@@ -47,10 +47,10 @@ function Row({ s }: { s: Service }) {
         </motion.span>
         <div>
           <motion.h3
-            className="display text-3xl sm:text-4xl md:text-5xl w-fit text-white/15 bg-no-repeat [background-image:linear-gradient(90deg,var(--color-ember)_0%,var(--color-ember)_55%,#ffffff_100%)]"
+            className="display text-3xl sm:text-4xl md:text-5xl w-fit text-ink/10 bg-no-repeat [background-image:linear-gradient(90deg,var(--color-ember)_0%,var(--color-ember)_55%,var(--color-ink)_100%)]"
             style={
               reduce
-                ? { color: "#ffffff" }
+                ? { color: "#191917" }
                 : {
                     backgroundSize,
                     x,
