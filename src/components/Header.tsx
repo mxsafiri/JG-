@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { nav, site } from "@/data/site";
 import Logo from "@/components/Logo";
+import { AnimatedThemeToggle } from "@/components/ui/animated-theme-toggle";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -52,13 +53,18 @@ export default function Header() {
             })}
           </nav>
 
-          <a
-            href={`mailto:${site.email}`}
-            className="hidden lg:block font-mono text-sm text-ash hover:text-ink transition-colors"
-          >
-            {site.email}
-          </a>
+          <div className="hidden lg:flex items-center gap-6">
+            <a
+              href={`mailto:${site.email}`}
+              className="font-mono text-sm text-ash hover:text-ink transition-colors"
+            >
+              {site.email}
+            </a>
+            <AnimatedThemeToggle />
+          </div>
 
+          <div className="lg:hidden flex items-center gap-2">
+            <AnimatedThemeToggle />
           <button
             type="button"
             onClick={() => setOpen(!open)}
@@ -74,6 +80,7 @@ export default function Header() {
               className={`block h-0.5 w-6 bg-ink transition-transform ${open ? "-translate-y-2 -rotate-45" : ""}`}
             />
           </button>
+          </div>
         </div>
       </div>
 

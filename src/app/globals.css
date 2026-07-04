@@ -1,13 +1,18 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   /* Palette lifted from the approved inspiration (Novaform concept) —
-     matches Jackson Group's black/orange identity */
+     matches Jackson Group's black/orange identity.
+     Semantic roles: bone = canvas, paper = raised surface, ink = text,
+     ash = muted text. The .dark block below flips them. */
   --color-ink: #191917;
   --color-coal: #0f0f0e;
   --color-ember: #ef6a25;
   --color-ash: #535351;
   --color-bone: #f4f2ee;
+  --color-paper: #ffffff;
 
   --font-sans: var(--font-instrument), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-anton), ui-sans-serif, system-ui, sans-serif;
@@ -16,6 +21,23 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Dark theme — the original charcoal look, one class away */
+.dark {
+  --color-ink: #f0eeea;
+  --color-ash: #8f8b84;
+  --color-bone: #161514;
+  --color-paper: #1e1d1b;
+}
+
+/* Sections that stay light in both themes (logo walls — client logos need
+   a white background regardless of theme) */
+.theme-light {
+  --color-ink: #191917;
+  --color-ash: #535351;
+  --color-bone: #f4f2ee;
+  --color-paper: #ffffff;
 }
 
 body {
@@ -51,7 +73,13 @@ body {
 .hero-gradient {
   background:
     radial-gradient(110% 90% at 80% 110%, rgba(239, 106, 37, 0.22) 0%, rgba(239, 106, 37, 0) 55%),
-    linear-gradient(170deg, #ffffff 0%, var(--color-bone) 55%, #e9e6e0 100%);
+    linear-gradient(170deg, #ffffff 0%, #f4f2ee 55%, #e9e6e0 100%);
+}
+
+.dark .hero-gradient {
+  background:
+    radial-gradient(110% 90% at 80% 110%, rgba(239, 106, 37, 0.28) 0%, rgba(239, 106, 37, 0) 55%),
+    linear-gradient(170deg, #1b1a19 0%, #161514 55%, #100f0e 100%);
 }
 
 /* Infinite logo marquee */
@@ -81,4 +109,10 @@ body {
   background:
     radial-gradient(120% 160% at 85% 100%, rgba(239, 106, 37, 0.28) 0%, rgba(239, 106, 37, 0) 55%),
     #eceae5;
+}
+
+.dark .cta-gradient {
+  background:
+    radial-gradient(120% 160% at 85% 100%, rgba(239, 106, 37, 0.32) 0%, rgba(239, 106, 37, 0) 55%),
+    #131211;
 }

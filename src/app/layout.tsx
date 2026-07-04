@@ -59,8 +59,17 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${instrument.variable} ${anton.variable} ${spaceMono.variable} ${questrial.variable} ${archivo.variable} h-full antialiased`}
     >
+      <head>
+        {/* Apply the stored theme before paint to avoid a flash */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{if(localStorage.getItem("jg-theme")==="dark")document.documentElement.classList.add("dark")}catch(e){}`,
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">
         <SmoothScroll />
         <Header />

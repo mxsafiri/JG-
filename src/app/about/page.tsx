@@ -30,7 +30,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-[#f1efea] border-y border-ink/10">
+      <section className="bg-[#f1efea] dark:bg-[#1a1918] border-y border-ink/10">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 py-20 md:py-28 grid gap-12 lg:grid-cols-[1fr_2fr]">
           <Reveal>
             <span className="label-mono">[Independent. Boutique. Africa-first.]</span>

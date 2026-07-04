@@ -92,7 +92,7 @@ export default function Home() {
 
       {/* Featured work — zoom-parallax showcase, then the three tiles the
           client requested */}
-      <section className="border-y border-ink/10 bg-[#f1efea]">
+      <section className="border-y border-ink/10 bg-[#f1efea] dark:bg-[#1a1918]">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 pt-24 md:pt-32">
           <div className="flex items-end justify-between gap-6">
             <div>
@@ -145,8 +145,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* The Company We Keep — borderless logo marquee on white */}
-      <section className="bg-white border-y border-ink/10">
+      {/* The Company We Keep — borderless logo marquee, white in both themes */}
+      <section className="bg-white theme-light border-y border-ink/10">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 pt-24 md:pt-32 pb-10">
           <div className="flex items-end justify-between gap-6">
             <div>

@@ -31,7 +31,7 @@ export default function CompanyWeKeepPage() {
         </div>
       </section>
 
-      <section className="bg-white border-t border-ink/10">
+      <section className="bg-white theme-light border-t border-ink/10">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 py-20 md:py-28">
           <LogoWall items={clients} />
         </div>

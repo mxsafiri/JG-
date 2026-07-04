@@ -33,7 +33,7 @@ export default function WorkPage() {
         </div>
       </section>
 
-      <section className="bg-[#f1efea] border-t border-ink/10">
+      <section className="bg-[#f1efea] dark:bg-[#1a1918] border-t border-ink/10">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 py-20 md:py-28">
           <Stagger className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3" step={0.07}>
             {caseStudies.map((cs) => (
