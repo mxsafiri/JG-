@@ -28,20 +28,20 @@ const showcase = [
 export default function Home() {
   return (
     <>
-      {/* Hero — charcoal-to-ember gradient with the Dar es Salaam skyline
-          blended into the background */}
+      {/* Hero — light greyscale canvas with the client's B&W Dar es Salaam
+          skyline ghosted into the background */}
       <section className="hero-gradient relative overflow-hidden">
         <Image
-          src="/media/dar-es-salaam-city.jpeg"
+          src="/media/dar-es-salaam-sobecki-01.jpg"
           alt=""
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[center_72%] opacity-25 grayscale"
+          className="object-cover object-center opacity-30"
         />
-        {/* Fades that melt the photo into the gradient: solid ink at the
-            top (nav zone), ember glow pooling at the bottom */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/60 to-transparent" />
+        {/* Fades that melt the photo into the light canvas: white at the
+            top (nav zone), a soft ember pool at the base */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/70 to-white/20" />
         <div className="absolute inset-0 bg-gradient-to-t from-ember/25 via-transparent to-transparent" />
 
         <div className="relative mx-auto max-w-7xl px-5 sm:px-8 pt-24 pb-24 md:pt-36 md:pb-32">
