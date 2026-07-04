@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Instrument_Sans, Anton, Space_Mono, Questrial } from "next/font/google";
+import { Instrument_Sans, Anton, Space_Mono, Questrial, Archivo } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -30,6 +30,13 @@ const questrial = Questrial({
   subsets: ["latin"],
 });
 
+// Thin display weight for the hero headline
+const archivo = Archivo({
+  variable: "--font-archivo",
+  weight: ["100", "200"],
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
@@ -52,7 +59,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${instrument.variable} ${anton.variable} ${spaceMono.variable} ${questrial.variable} h-full antialiased`}
+      className={`${instrument.variable} ${anton.variable} ${spaceMono.variable} ${questrial.variable} ${archivo.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <SmoothScroll />

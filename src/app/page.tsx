@@ -51,7 +51,7 @@ export default function Home() {
             </span>
           </Reveal>
 
-          <h1 className="display text-5xl sm:text-7xl md:text-8xl mt-8 max-w-5xl">
+          <h1 className="[font-family:var(--font-archivo)] font-thin uppercase leading-[1.04] tracking-[0.02em] text-5xl sm:text-7xl md:text-8xl mt-8 max-w-5xl">
             <MaskReveal delay={0.1}>Independent.</MaskReveal>
             <MaskReveal delay={0.2}>Boutique.</MaskReveal>
             <MaskReveal delay={0.3}>Africa-first.</MaskReveal>
