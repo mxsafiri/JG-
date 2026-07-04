@@ -19,11 +19,12 @@ export default function ContactForm() {
     window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`;
   }
 
+  // Light styling — the form sits on a white panel per client feedback.
   const field =
-    "w-full bg-white/5 border border-white/15 px-4 py-3.5 text-white placeholder:text-ash focus:outline-none focus:border-ember transition-colors";
+    "w-full bg-ink/[0.03] border border-ink/20 px-4 py-3.5 text-ink placeholder:text-ash/60 focus:outline-none focus:border-ember transition-colors";
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-5 lg:mt-14">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-5">
       <label className="flex flex-col gap-2">
         <span className="font-mono text-xs text-ash">Name</span>
         <input
@@ -73,7 +74,7 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className="mt-2 bg-ember text-white font-mono text-sm px-8 py-4 hover:bg-white hover:text-ink transition-colors w-fit"
+        className="mt-2 bg-ember text-white font-mono text-sm px-8 py-4 hover:bg-ink hover:text-white transition-colors w-fit"
       >
         Send message →
       </button>

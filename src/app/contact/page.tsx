@@ -50,8 +50,12 @@ export default function ContactPage() {
           </Reveal>
         </div>
 
+        {/* Per client feedback: the data-collection side goes light/white,
+            the left stays dark */}
         <Reveal delay={0.3} y={40}>
-          <ContactForm />
+          <div className="bg-white text-ink p-6 sm:p-10 lg:mt-6">
+            <ContactForm />
+          </div>
         </Reveal>
       </div>
     </section>

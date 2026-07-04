@@ -32,12 +32,11 @@ Navigation is exactly as requested in the client's feedback document:
 
 ## Awaiting from client
 
-- [ ] Official Jackson Group logo files (SVG/PNG) — a text wordmark
-      (`src/components/Logo.tsx`) stands in for now
-- [ ] The "previous document" with approved homepage wording referenced in
-      the feedback doc
-- [ ] Confirmed contact details — email/phone/address currently come from
-      public listings (`src/data/site.ts`)
+- [ ] Official Jackson Group logo files (SVG/PNG) — the wordmark is recreated
+      typographically in `src/components/Logo.tsx` from the lockup the client
+      shared; swap in the real file when available
+- [x] Phone confirmed by client: +255 768 500 999
+- [ ] Email/address still from public listings (`src/data/site.ts`) — confirm
 - [ ] Contact form fields to collect ("we will share the info to be collected")
 - [ ] The remaining 10 of 22 case studies, if wanted on the site
 - [ ] Photography per `IMAGE_SPECS.md`

@@ -9,7 +9,7 @@ export const site = {
     "Jackson Group is an independent, Pan-African marketing and growth consultancy helping brands enter markets, scale faster, and drive measurable impact across Africa.",
   url: "https://jacksongrouptz.com",
   email: "projects@jacksongrouptz.com",
-  phone: "+255 754 712 030",
+  phone: "+255 768 500 999",
   address: "418 Toure Drive, Masaki, Dar es Salaam, Tanzania",
   social: {
     facebook: "https://www.facebook.com/jacksongrouptz/",

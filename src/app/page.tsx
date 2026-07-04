@@ -44,75 +44,48 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-ink via-ink/55 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-ember/70 via-transparent to-transparent" />
 
-        <div className="relative mx-auto max-w-7xl px-5 sm:px-8 pt-16 pb-24 md:pt-24 md:pb-32">
-          <Stagger className="hidden md:block font-mono text-sm space-y-1.5" step={0.06}>
-            {services.map((s, i) => (
-              <StaggerItem key={s.n}>
-                <Link
-                  href="/about#services"
-                  className={`transition-colors hover:text-white ${i === 0 ? "text-white" : "text-white/35"}`}
-                >
-                  <span className="mr-3">{s.n}</span>
-                  {s.title}
-                </Link>
+        <div className="relative mx-auto max-w-7xl px-5 sm:px-8 pt-24 pb-24 md:pt-36 md:pb-32">
+          <Reveal>
+            <span className="label-mono text-white/60">
+              [{site.tagline}]
+            </span>
+          </Reveal>
+
+          <h1 className="display text-5xl sm:text-7xl md:text-8xl mt-8 max-w-5xl">
+            <MaskReveal delay={0.1}>Independent.</MaskReveal>
+            <MaskReveal delay={0.2}>Boutique.</MaskReveal>
+            <MaskReveal delay={0.3}>Africa-first.</MaskReveal>
+          </h1>
+
+          <Reveal delay={0.45}>
+            <p className="mt-8 text-lg text-white/85 max-w-2xl leading-relaxed">
+              We are a senior-led marketing and growth consultancy with over 20
+              years of experience building brands across Africa. We work with a
+              focused portfolio of clients — and when you work with us, you get
+              our full attention.
+            </p>
+          </Reveal>
+
+          <Reveal delay={0.55} y={16}>
+            <Link
+              href="/contact"
+              className="group mt-10 inline-flex items-center gap-3 bg-ember text-white font-mono text-sm px-8 py-4 hover:bg-white hover:text-ink transition-colors duration-300"
+            >
+              Start a project{" "}
+              <span aria-hidden className="group-hover:translate-x-1 transition-transform duration-300">
+                →
+              </span>
+            </Link>
+          </Reveal>
+
+          <Stagger className="mt-16 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl">
+            {stats.map((s) => (
+              <StaggerItem key={s.label}>
+                <p className="display text-4xl md:text-5xl text-ember">{s.value}</p>
+                <p className="mt-2 font-mono text-xs text-white/60">{s.label}</p>
               </StaggerItem>
             ))}
           </Stagger>
-
-          <div className="mt-10 md:mt-20 text-center">
-            <h1 className="display text-[17vw] md:text-[9.5rem] lg:text-[11rem]">
-              <MaskReveal delay={0.1}>Jackson</MaskReveal>
-              <MaskReveal delay={0.22} className="md:ml-40">
-                Group
-              </MaskReveal>
-            </h1>
-            <Reveal delay={0.5} y={12}>
-              <Link
-                href="/contact"
-                className="mt-8 inline-block font-mono text-sm underline underline-offset-8 hover:text-ink transition-colors"
-              >
-                Start a project
-              </Link>
-            </Reveal>
-          </div>
-
-          <Reveal delay={0.35} className="mt-16 md:mt-24 max-w-md">
-            <p className="font-mono text-sm leading-relaxed text-white/90">
-              {site.tagline}. We help brands enter markets, scale faster, and
-              drive measurable impact across Africa.
-            </p>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* Merged intro section — one block, per the feedback document */}
-      <section className="bg-ink">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8 py-24 md:py-32 grid gap-12 lg:grid-cols-[1fr_2fr]">
-          <Reveal>
-            <span className="label-mono">[Who we are]</span>
-          </Reveal>
-          <div>
-            <h2 className="display text-4xl sm:text-5xl md:text-6xl max-w-3xl">
-              <MaskReveal>Independent. Boutique.</MaskReveal>
-              <MaskReveal delay={0.12}>Africa-first.</MaskReveal>
-            </h2>
-            <Reveal delay={0.2}>
-              <p className="mt-8 text-lg text-white/80 max-w-2xl leading-relaxed">
-                We are a senior-led marketing and growth consultancy with over 20
-                years of experience building brands across Africa. We work with a
-                focused portfolio of clients — and when you work with us, you get
-                our full attention.
-              </p>
-            </Reveal>
-            <Stagger className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((s) => (
-                <StaggerItem key={s.label}>
-                  <p className="display text-4xl md:text-5xl text-ember">{s.value}</p>
-                  <p className="mt-2 font-mono text-xs text-ash">{s.label}</p>
-                </StaggerItem>
-              ))}
-            </Stagger>
-          </div>
         </div>
       </section>
 
