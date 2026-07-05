@@ -61,9 +61,7 @@ export default function Home() {
           <Reveal delay={0.45}>
             <p className="mt-8 text-lg text-ink/80 max-w-2xl leading-relaxed">
               We are a senior-led marketing and growth consultancy with over 20
-              years of experience building brands across Africa. We work with a
-              focused portfolio of clients — and when you work with us, you get
-              our full attention.
+              years of experience building brands across Africa.
             </p>
           </Reveal>
 

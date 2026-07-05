@@ -38,9 +38,7 @@ export default function AboutPage() {
           <Reveal delay={0.15} className="space-y-6 text-lg text-ink/80 leading-relaxed max-w-2xl">
             <p>
               We are a senior-led marketing and growth consultancy with over 20
-              years of experience building brands across Africa. We work with a
-              focused portfolio of clients — and when you work with us, you get
-              our full attention.
+              years of experience building brands across Africa.
             </p>
             <p>
               From Dar es Salaam we have taken brands into nine African
