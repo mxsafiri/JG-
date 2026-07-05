@@ -69,11 +69,9 @@ body {
   color: var(--color-ash);
 }
 
-/* Hero — light greyscale with a soft ember pool at the base */
+/* Hero — clean light greyscale, no colour cast (client feedback) */
 .hero-gradient {
-  background:
-    radial-gradient(110% 90% at 80% 110%, rgba(239, 106, 37, 0.22) 0%, rgba(239, 106, 37, 0) 55%),
-    linear-gradient(170deg, #ffffff 0%, #f4f2ee 55%, #e9e6e0 100%);
+  background: linear-gradient(170deg, #ffffff 0%, #f4f2ee 55%, #e9e6e0 100%);
 }
 
 .dark .hero-gradient {

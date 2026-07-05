@@ -40,10 +40,10 @@ export default function Home() {
           className="object-cover object-center opacity-70"
         />
         {/* Keep the left text zone readable, let the skyline emerge on the
-            right; light veil at the top for the nav */}
+            right; light veils top (nav) and bottom (stats) */}
         <div className="absolute inset-0 bg-gradient-to-r from-bone via-bone/75 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-b from-bone/90 via-transparent to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ember/20 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-bone via-bone/35 to-transparent" />
 
         <div className="relative mx-auto max-w-7xl px-5 sm:px-8 pt-24 pb-24 md:pt-36 md:pb-32">
           <Reveal>
@@ -83,7 +83,9 @@ export default function Home() {
             {stats.map((s) => (
               <StaggerItem key={s.label}>
                 <p className="display text-4xl md:text-5xl text-ember">{s.value}</p>
-                <p className="mt-2 font-mono text-xs text-ash">{s.label}</p>
+                <p className="mt-2 text-[13px] font-medium uppercase tracking-[0.12em] text-ink/75">
+                  {s.label}
+                </p>
               </StaggerItem>
             ))}
           </Stagger>
