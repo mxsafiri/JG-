@@ -36,7 +36,8 @@ Navigation is exactly as requested in the client's feedback document:
       typographically in `src/components/Logo.tsx` from the lockup the client
       shared; swap in the real file when available
 - [x] Phone confirmed by client: +255 768 500 999
-- [ ] Email/address still from public listings (`src/data/site.ts`) — confirm
+- [x] Address confirmed: Chole Plaza, 1st Floor, 26 Chole Rd, Dar es Salaam
+- [ ] Email still from public listings (`src/data/site.ts`) — confirm
 - [ ] Contact form fields to collect ("we will share the info to be collected")
 - [ ] The remaining 10 of 22 case studies, if wanted on the site
 - [ ] Photography per `IMAGE_SPECS.md`
