@@ -38,6 +38,6 @@ export const services = [
 export const stats = [
   { value: "22", label: "Client stories" },
   { value: "9+", label: "African markets" },
-  { value: "20+", label: "Years of senior experience" },
-  { value: "2015", label: "Founded in Dar es Salaam" },
+  { value: "20+", label: "Years of experience" },
+  { value: "2015", label: "Est. Dar es Salaam" },
 ];

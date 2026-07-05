@@ -45,7 +45,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-bone/90 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-bone via-bone/35 to-transparent" />
 
-        <div className="relative mx-auto max-w-7xl px-5 sm:px-8 pt-24 pb-24 md:pt-36 md:pb-32">
+        <div className="relative mx-auto max-w-7xl px-5 sm:px-8 pt-24 pb-16 md:pt-36 md:pb-20">
           <Reveal>
             <span className="label-mono">
               [{site.tagline}]
@@ -79,11 +79,14 @@ export default function Home() {
             </Link>
           </Reveal>
 
-          <Stagger className="mt-16 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl">
-            {stats.map((s) => (
-              <StaggerItem key={s.label}>
+          <Stagger className="mt-16 md:mt-24 grid grid-cols-2 md:grid-cols-4 border-t border-ink/15">
+            {stats.map((s, i) => (
+              <StaggerItem
+                key={s.label}
+                className={`pt-6 pb-2 pr-6 ${i > 0 ? "md:border-l md:border-ink/15 md:pl-8" : ""} ${i % 2 === 1 ? "border-l border-ink/15 pl-6 md:pl-8" : ""}`}
+              >
                 <p className="display text-4xl md:text-5xl text-ember">{s.value}</p>
-                <p className="mt-2 text-[13px] font-medium uppercase tracking-[0.12em] text-ink/75">
+                <p className="mt-2 text-xs font-medium uppercase tracking-[0.14em] text-ink/70 whitespace-nowrap">
                   {s.label}
                 </p>
               </StaggerItem>
