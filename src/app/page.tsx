@@ -10,19 +10,19 @@ import Marquee from "@/components/anim/Marquee";
 import MaskReveal from "@/components/anim/MaskReveal";
 import Reveal from "@/components/anim/Reveal";
 import { Stagger, StaggerItem } from "@/components/anim/Stagger";
-import { ZoomParallax } from "@/components/ui/zoom-parallax";
+import { InteractiveSelector } from "@/components/ui/interactive-selector";
 
-// Zoom-parallax showcase: real campaign assets first; branded placeholder
-// tiles hold the remaining slots until the client sends more visuals
+// Expanding-panel showcase: real campaign assets where supplied; branded
+// placeholder tiles hold the rest until the client sends more visuals
 // (specs in IMAGE_SPECS.md).
 const showcase = [
-  { src: "/media/rumble-in-dar.jpeg", alt: "Rumble in Dar — boxing series created by Jackson Group" },
-  { src: "/media/showmax-hatma.jpeg", alt: "HATMA on Showmax — Tanzania launch campaign" },
-  { src: "/media/pigabet-shinda-ndinga.jpeg", alt: "PigaBet Shinda Ndinga campaign" },
-  { src: "/media/yanga-unicef.jpeg", alt: "Yanga and UNICEF partnership unveiling" },
-  { src: "/media/placeholders/absa-epl.svg", alt: "ABSA EPL matchday activations" },
-  { src: "/media/10bet-dodoma.png", alt: "10bet Dodoma Jiji sponsorship campaign" },
-  { src: "/media/placeholders/tamgo-rebrand.svg", alt: "TAMGO rebrand launch" },
+  { title: "Rumble in Dar", description: "Sports IP · Boxing", image: "/media/rumble-in-dar.jpeg", index: "14 / 22", href: "/work/rumble-in-dar" },
+  { title: "Showmax", description: "Market entry", image: "/media/showmax-hatma.jpeg", index: "04 / 22", href: "/work/showmax" },
+  { title: "PigaBet", description: "360 marketing", image: "/media/pigabet-shinda-ndinga.jpeg", index: "22 / 22", href: "/work/pigabet" },
+  { title: "Yanga × UNICEF", description: "Behaviour change", image: "/media/yanga-unicef.jpeg", index: "13 / 22", href: "/work/yanga" },
+  { title: "ABSA Bank", description: "EPL activation", image: "/media/placeholders/absa-epl.svg", index: "05 / 22", href: "/work/absa-bank" },
+  { title: "10bet Africa", description: "Pan-African GTM", image: "/media/10bet-dodoma.png", index: "11 / 22", href: "/work/10bet-africa" },
+  { title: "TAMGO", description: "Rebrand · PR", image: "/media/placeholders/tamgo-rebrand.svg", index: "18 / 22", href: "/work/tamgo-tanzania" },
 ];
 
 export default function Home() {
@@ -119,7 +119,9 @@ export default function Home() {
           </div>
         </div>
 
-        <ZoomParallax images={showcase} />
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 mt-12">
+          <InteractiveSelector options={showcase} />
+        </div>
 
         <div className="mx-auto max-w-7xl px-5 sm:px-8 pb-24 md:pb-32">
           <Stagger className="mt-12 grid gap-5 md:grid-cols-3" step={0.12}>
