@@ -15,7 +15,6 @@ export interface SelectorOption {
   title: string;
   description: string;
   image: string;
-  index: string; // e.g. "14 / 22"
   href: string;
 }
 
@@ -79,12 +78,7 @@ export function InteractiveSelector({ options }: { options: SelectorOption[] }) 
               }}
             />
 
-            <div className="relative z-10 flex items-center gap-3 p-4 md:p-5">
-              <div className="flex h-11 min-w-11 items-center justify-center rounded-full border border-white/25 bg-[rgba(20,20,19,0.75)] px-2 backdrop-blur">
-                <span className="font-mono text-[10px] text-white whitespace-nowrap">
-                  {option.index}
-                </span>
-              </div>
+            <div className="relative z-10 p-4 md:p-5">
               <div
                 className="text-white transition-all duration-700 ease-in-out"
                 style={{

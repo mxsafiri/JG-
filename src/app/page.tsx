@@ -16,13 +16,13 @@ import { InteractiveSelector } from "@/components/ui/interactive-selector";
 // placeholder tiles hold the rest until the client sends more visuals
 // (specs in IMAGE_SPECS.md).
 const showcase = [
-  { title: "Rumble in Dar", description: "Sports IP · Boxing", image: "/media/rumble-in-dar.jpeg", index: "14 / 22", href: "/work/rumble-in-dar" },
-  { title: "Showmax", description: "Market entry", image: "/media/showmax-hatma.jpeg", index: "04 / 22", href: "/work/showmax" },
-  { title: "PigaBet", description: "360 marketing", image: "/media/pigabet-shinda-ndinga.jpeg", index: "22 / 22", href: "/work/pigabet" },
-  { title: "Yanga × UNICEF", description: "Behaviour change", image: "/media/yanga-unicef.jpeg", index: "13 / 22", href: "/work/yanga" },
-  { title: "ABSA Bank", description: "EPL activation", image: "/media/placeholders/absa-epl.svg", index: "05 / 22", href: "/work/absa-bank" },
-  { title: "10bet Africa", description: "Pan-African GTM", image: "/media/10bet-dodoma.png", index: "11 / 22", href: "/work/10bet-africa" },
-  { title: "TAMGO", description: "Rebrand · PR", image: "/media/placeholders/tamgo-rebrand.svg", index: "18 / 22", href: "/work/tamgo-tanzania" },
+  { title: "Rumble in Dar", description: "Sports IP · Boxing", image: "/media/rumble-in-dar.jpeg", href: "/work/rumble-in-dar" },
+  { title: "Showmax", description: "Market entry", image: "/media/showmax-hatma.jpeg", href: "/work/showmax" },
+  { title: "PigaBet", description: "360 marketing", image: "/media/pigabet-shinda-ndinga.jpeg", href: "/work/pigabet" },
+  { title: "Yanga × UNICEF", description: "Behaviour change", image: "/media/yanga-unicef.jpeg", href: "/work/yanga" },
+  { title: "ABSA Bank", description: "EPL activation", image: "/media/placeholders/absa-epl.svg", href: "/work/absa-bank" },
+  { title: "10bet Africa", description: "Pan-African GTM", image: "/media/10bet-dodoma.png", href: "/work/10bet-africa" },
+  { title: "TAMGO", description: "Rebrand · PR", image: "/media/placeholders/tamgo-rebrand.svg", href: "/work/tamgo-tanzania" },
 ];
 
 export default function Home() {
