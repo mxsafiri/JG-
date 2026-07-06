@@ -16,13 +16,13 @@ import { InteractiveSelector } from "@/components/ui/interactive-selector";
 // placeholder tiles hold the rest until the client sends more visuals
 // (specs in IMAGE_SPECS.md).
 const showcase = [
-  { title: "Rumble in Dar", description: "Sports IP · Boxing", image: "/media/rumble-in-dar.jpeg", href: "/work/rumble-in-dar" },
-  { title: "Showmax", description: "Market entry", image: "/media/showmax-hatma.jpeg", href: "/work/showmax" },
-  { title: "PigaBet", description: "360 marketing", image: "/media/pigabet-shinda-ndinga.jpeg", href: "/work/pigabet" },
-  { title: "Yanga × UNICEF", description: "Behaviour change", image: "/media/yanga-unicef.jpeg", href: "/work/yanga" },
-  { title: "ABSA Bank", description: "EPL activation", image: "/media/placeholders/absa-epl.svg", href: "/work/absa-bank" },
+  { title: "Rumble in Dar", description: "Sports IP · Boxing", image: "/media/rumble-in-dar-1.jpg", href: "/work/rumble-in-dar" },
+  { title: "Showmax", description: "Market entry", image: "/media/showmax-imefika.jpg", href: "/work/showmax" },
+  { title: "Y9 Smart Bank", description: "Product launch", image: "/media/y9-smart-bank.jpg", href: "/work/y9" },
+  { title: "PigaBet", description: "360 marketing", image: "/media/pigabet-2.jpg", href: "/work/pigabet" },
+  { title: "Chloride Exide", description: "Digital · Distribution", image: "/media/chloride-exide.jpg", href: "/work/chloride-exide" },
+  { title: "MUA", description: "Rebrand", image: "/media/mua-rebrand.jpg", href: "/work/mua-insurance" },
   { title: "10bet Africa", description: "Pan-African GTM", image: "/media/10bet-dodoma.png", href: "/work/10bet-africa" },
-  { title: "TAMGO", description: "Rebrand · PR", image: "/media/placeholders/tamgo-rebrand.svg", href: "/work/tamgo-tanzania" },
 ];
 
 export default function Home() {

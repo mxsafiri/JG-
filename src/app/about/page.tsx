@@ -41,11 +41,11 @@ export default function AboutPage() {
               years of experience building brands across Africa.
             </p>
             <p>
-              From Dar es Salaam we have taken brands into nine African
-              markets, built go-to-market playbooks for global entrants,
-              rebranded market leaders, and created sporting properties of our
-              own. Africa is not one market — and we plan, buy, and build like
-              we know it.
+              We are an independent, truly integrated marketing consultancy
+              focused on building brand experiences that are human, inventive,
+              and inspirational. Our research capability, coupled with
+              Pan-African intelligence, drives everything we do for our
+              clients.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-4">
               {stats.map((s) => (

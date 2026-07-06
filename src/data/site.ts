@@ -8,9 +8,9 @@ export const site = {
   description:
     "Jackson Group is an independent, Pan-African marketing and growth consultancy helping brands enter markets, scale faster, and drive measurable impact across Africa.",
   url: "https://jacksongrouptz.com",
-  email: "projects@jacksongrouptz.com",
+  email: "info@jacksongrouptz.com",
   phone: "+255 768 500 999",
-  address: "Chole Plaza, 1st Floor, 26 Chole Rd, Dar es Salaam, Tanzania",
+  address: "Chole Plaza, 1st Floor, Chole Road, Masaki, P.O. Box 22365, Dar es Salaam, Tanzania",
   social: {
     facebook: "https://www.facebook.com/jacksongrouptz/",
     linkedin: "https://tz.linkedin.com/company/jackson-group-tz-",
@@ -26,13 +26,13 @@ export const nav = [
   { label: "Contact", href: "/contact" },
 ];
 
+// Service taxonomy and blurbs from the official company profile (2026)
 export const services = [
-  { n: "01", title: "Brand & Go-To-Market Strategy", blurb: "Market entry playbooks, brand positioning, and growth strategy built for African markets." },
-  { n: "02", title: "Digital & Social Media", blurb: "Content development, social media management, and performance-driven acquisition." },
-  { n: "03", title: "Media Buying & Communications", blurb: "Data-driven media strategy across TV, radio, digital, and print." },
-  { n: "04", title: "Sports Marketing & IP", blurb: "Sponsorships, sports IP rights management, club partnerships, and owned properties." },
-  { n: "05", title: "Events & Brand Activations", blurb: "ATL and BTL campaigns, launch events, and activations that people remember." },
-  { n: "06", title: "Corporate PR & Advisory", blurb: "Corporate communications, rebrands, government advisory, and stakeholder engagement." },
+  { n: "01", title: "Brand Strategy", blurb: "Compelling, inspiring brand strategy recommendations that address your business growth." },
+  { n: "02", title: "Go-To-Market Strategy", blurb: "Insight and mapping expertise that unlocks the value chain and ensures products reach their customers." },
+  { n: "03", title: "Communication Strategy", blurb: "Effective communications, media planning, and optimum execution — measured for the highest ROI." },
+  { n: "04", title: "Corporate Communication", blurb: "Media and public relations, crisis communication, and stakeholder management, internal and external." },
+  { n: "05", title: "Rights Management", blurb: "Sponsorship revenue and IP rights management across soccer, boxing, and golf properties." },
 ];
 
 export const stats = [

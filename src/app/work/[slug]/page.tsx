@@ -66,6 +66,19 @@ export default async function CaseStudyPage({ params }: Props) {
                 {cs.summary}
               </p>
             </Reveal>
+            {cs.results && (
+              <Reveal delay={0.15} className="mt-12">
+                <span className="label-mono">[The numbers]</span>
+                <ul className="mt-5 max-w-2xl space-y-0">
+                  {cs.results.map((r) => (
+                    <li key={r} className="flex gap-4 border-b border-ink/10 py-3.5">
+                      <span aria-hidden className="text-ember shrink-0">→</span>
+                      <span className="text-ink/85">{r}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Reveal>
+            )}
             {cs.image && (
               <Reveal y={48} className="mt-14 relative max-w-2xl">
                 <Image
