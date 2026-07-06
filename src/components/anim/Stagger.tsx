@@ -19,7 +19,10 @@ export function Stagger({
       className={className}
       initial={reduce ? false : "hidden"}
       whileInView="show"
-      viewport={{ once: true, amount: 0.15 }}
+      // amount must stay tiny: for tall containers (a one-column grid of 17
+      // case cards on mobile) a 15% threshold can exceed the viewport height
+      // and never fire, leaving every child invisible
+      viewport={{ once: true, amount: 0.02 }}
       transition={{ staggerChildren: step }}
     >
       {children}
