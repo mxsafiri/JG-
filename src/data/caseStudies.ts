@@ -122,6 +122,7 @@ export const caseStudies: CaseStudy[] = [
     region: "Tanzania",
     summary:
       "SelcomPesa operates in one of Tanzania's most competitive spaces — mobile financial services — where awareness alone is not enough to move the needle. Our engagement covers the full marketing spectrum: content development and social media management to above-the-line awareness campaigns and performance-driven acquisition activity. Every piece of content we produce is built with a dual purpose — to grow recognition of the brand and to convert that recognition into active users.",
+    image: "/media/selcom-pesa.jpg",
   },
   {
     slug: "pigabet",
