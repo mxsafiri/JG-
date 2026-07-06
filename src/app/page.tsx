@@ -22,7 +22,7 @@ const showcase = [
   { title: "PigaBet", description: "360 marketing", image: "/media/pigabet-2.jpg", href: "/work/pigabet" },
   { title: "Chloride Exide", description: "Digital · Distribution", image: "/media/chloride-exide.jpg", href: "/work/chloride-exide" },
   { title: "MUA", description: "Rebrand", image: "/media/mua-rebrand.jpg", href: "/work/mua-insurance" },
-  { title: "10bet Africa", description: "Pan-African GTM", image: "/media/10bet-dodoma.png", href: "/work/10bet-africa" },
+  { title: "10bet Africa", description: "Pan-African GTM", image: "/media/10bet-sports.jpg", href: "/work/10bet-africa" },
 ];
 
 export default function Home() {

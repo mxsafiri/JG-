@@ -40,6 +40,7 @@ export const caseStudies: CaseStudy[] = [
     region: "Tanzania",
     summary:
       "ABSA came to us with two challenges at once: squeeze more value out of their media spend in Tanzania, and turn an English Premier League sponsorship into something fans actually cared about. On the media side, we built a data-driven buying strategy across TV, radio, digital, and print. On the EPL side, we designed BTL activations built for match days — live screenings, interactive fan experiences, and giveaways — amplified with influencer-led social campaigns.",
+    image: "/media/absa-tanzania.jpg",
     featured: true,
   },
   {
@@ -94,7 +95,7 @@ export const caseStudies: CaseStudy[] = [
     region: "9 Markets",
     summary:
       "10bet had ambitious plans to enter Africa across nine markets. They needed a partner who understood that Africa is not one market. We built the full Pan-African go-to-market playbook — market entry plans, financial projections, product mix recommendations, and a sponsorship strategy that put 10bet on the front of six premier league shirts across Zambia, Ghana, and Nigeria. We launched four markets by Q4 2022.",
-    image: "/media/10bet-dodoma.png",
+    image: "/media/10bet-sports.jpg",
     results: [
       "100,000+ players gained within the first quarter of operations",
       "Front-of-shirt sponsorships with 6 premier league clubs across Africa",
@@ -109,6 +110,7 @@ export const caseStudies: CaseStudy[] = [
     region: "East Africa",
     summary:
       "The AFL's inaugural opening ceremony at Benjamin Mkapa Stadium on 20 October 2023 demanded perfection. We handled political advisory, logistics and permits clearance, inter-government co-ordination, opening ceremony entertainment integration, and media advisory. Over 60 VVIP delegates were managed without incident, and a pre-launch press release distributed across East Africa ensured continental attention before a single kick was taken.",
+    image: "/media/afl-league.jpg",
   },
   {
     slug: "yanga",
