@@ -44,30 +44,6 @@ export const caseStudies: CaseStudy[] = [
     featured: true,
   },
   {
-    slug: "tamgo-tanzania",
-    client: "TAMGO Tanzania",
-    index: "18 / 22",
-    tags: ["Rebrand", "Corporate PR", "Event Management"],
-    region: "Tanzania",
-    summary:
-      "Rebranding from Merry Water to TAMGO Tanzania was a statement of intent about where the business was going. As a leading provider of water treatment, solar systems, pumps, and diesel generators, TAMGO needed the rebrand to communicate strength and ambition. We managed the full corporate communications strategy and launch event, with live TV and online TV interviews giving the rebrand immediate visibility.",
-    results: [
-      "10 key newspapers published the editorial content",
-      "Coverage from 6 online publishers and 3 major TV stations",
-      "Live TV and online-TV interviews at the launch event",
-    ],
-    featured: true,
-  },
-  {
-    slug: "tbl-budweiser",
-    client: "Tanzania Breweries / Budweiser",
-    index: "03 / 22",
-    tags: ["Content Production", "Digital Management", "Brand Activation"],
-    region: "Tanzania",
-    summary:
-      "When the World Cup came around, Budweiser Tanzania wanted more than a logo on a post — they wanted to own the moment. We led content development and digital management for the campaign, merging creative production with strategic planning to put the brand at the heart of the football conversation. From live fan events to digital content that captured the energy of the tournament, every activation was built to drive real brand connection — not just impressions.",
-  },
-  {
     slug: "showmax",
     client: "Showmax",
     index: "04 / 22",
@@ -136,6 +112,7 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "Rumble in Dar is not a client brief — it is a brand asset we created from scratch. Conceived and developed in-house by Jackson Group, the professional boxing series gives Tanzania a world-class sporting spectacle and gives sponsors one of the most powerful brand activation platforms on the continent. Each edition places the presenting sponsor's brand at the centre of an electrifying live event with worldwide broadcast reach and a tourism campaign that puts Dar es Salaam on the global map.",
     image: "/media/rumble-in-dar-1.jpg",
+    featured: true,
   },
   {
     slug: "selcompesa",
@@ -170,63 +147,6 @@ export const caseStudies: CaseStudy[] = [
       "161,000 accounts opened with full KYC",
       "137,000+ customers received loans",
       "Doubled the Q1 sales target and launched MNO partnerships",
-    ],
-  },
-  {
-    slug: "m-bet",
-    client: "M-Bet",
-    index: "15 / 22",
-    tags: ["Rebrand", "Brand Expansion", "5 Markets"],
-    region: "Sub-Saharan Africa",
-    summary:
-      "When the pandemic cancelled live football, revenues shrank across the betting industry. Our engagement re-branded M-Bet across five markets — Tanzania, Kenya, Uganda, Zambia, and DRC — while launching alternative revenue streams to replace the missing matches. We took Quick Games into three markets and Simulated Reality League into all five, with through-the-line launch campaigns in each.",
-    results: [
-      "110% recovery of pre-Covid revenue by November 2020",
-      "4.5× revenue growth within 4 months",
-      "200% growth in acquisition driven by Quick Games within 30 days",
-      "Partnership with KMC premier league club in Tanzania",
-    ],
-  },
-  {
-    slug: "halotel",
-    client: "Halotel",
-    index: "16 / 22",
-    tags: ["360 Acquisition Campaign", "Telecoms"],
-    region: "Tanzania",
-    summary:
-      "Halotel entered Tanzania with fast 4G and a rural-to-urban strategy — but faced entrenched competitors whose 'community advantage' kept subscribers locked in. We built a 360-degree acquisition campaign around the network's real strengths — lower pricing, no dropped calls, faster data — under one sharp promise: Switch to Halotel. Ina make sense!",
-    results: [
-      "500,000 customers gained during the April–June 2017 campaign",
-      "Customer base grew from 3.5 million to nearly 4 million in one quarter",
-    ],
-  },
-  {
-    slug: "phoenix-utulivu",
-    client: "Phoenix Assurance",
-    index: "07 / 22",
-    tags: ["Product Launch", "360 Campaign", "Corporate PR"],
-    region: "Tanzania",
-    summary:
-      "Phoenix launched Utulivu — Tanzania's first 24/7 roadside assistance, bundled free with comprehensive motor policies. We took it to market twice over: a 360 awareness campaign with a hero TVC, always-on digital, and radio; and a corporate communications launch that put the insurance regulator, traffic police, and twenty senior editors in the room.",
-    results: [
-      "3 million people reached through radio and digital media",
-      "1,000 leads generated for auto insurance policies",
-      "300% of digital media KPIs achieved versus budget",
-      "12 key papers and 45 online publishers carried the launch",
-    ],
-  },
-  {
-    slug: "dentaweiss",
-    client: "Dentaweiss",
-    index: "09 / 22",
-    tags: ["Awareness Campaign", "Digital", "Distribution"],
-    region: "Tanzania",
-    summary:
-      "For toothpaste brand Dentaweiss, we created 'Anza na Tabasamu' — start with a smile — a digitally driven campaign pairing social media and radio with marketing intelligence on the ground: building the retail and distribution structures that seeded the product into the market while the campaign pulled demand through it.",
-    results: [
-      "56% brand awareness achieved in Dar es Salaam",
-      "2.5 million reach via digital media",
-      "295,000 engagements across social media",
     ],
   },
 ];
