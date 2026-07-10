@@ -21,7 +21,7 @@ export default function WorkPage() {
             <span className="label-mono">[Our Work]</span>
           </Reveal>
           <h1 className="display text-5xl sm:text-6xl md:text-7xl mt-4 max-w-4xl">
-            <MaskReveal delay={0.1}>22 client stories.</MaskReveal>
+            <MaskReveal delay={0.1}>Selected work.</MaskReveal>
             <MaskReveal delay={0.22}>Measurable impact across Africa.</MaskReveal>
           </h1>
           <Reveal delay={0.35}>

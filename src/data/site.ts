@@ -17,12 +17,12 @@ export const site = {
   },
 };
 
-// Navigation order and naming are exactly as requested in the client's
-// feedback document: About Us, Our Work, The Company We Keep, Contact.
+// Navigation order per the July 2026 feedback:
+// About Us, The Company We Keep, Our Work, Contact.
 export const nav = [
   { label: "About Us", href: "/about" },
-  { label: "Our Work", href: "/work" },
   { label: "The Company We Keep", href: "/company-we-keep" },
+  { label: "Our Work", href: "/work" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -35,9 +35,10 @@ export const services = [
   { n: "05", title: "Rights Management", blurb: "Sponsorship revenue and IP rights management across soccer, boxing, and golf properties." },
 ];
 
+// No client-count number here — per feedback, "we showcase some, not all"
 export const stats = [
-  { value: "22", label: "Client stories" },
-  { value: "9+", label: "African markets" },
   { value: "20+", label: "Years of experience" },
+  { value: "9+", label: "African markets" },
+  { value: "360°", label: "Integrated marketing" },
   { value: "2015", label: "Est. Dar es Salaam" },
 ];

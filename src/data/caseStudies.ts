@@ -6,7 +6,7 @@
 export type CaseStudy = {
   slug: string;
   client: string;
-  index: string; // numbering as it appears in the deck, e.g. "02 / 22"
+  index: string; // display order, strategic work first
   tags: string[];
   region: string;
   summary: string;
@@ -17,9 +17,82 @@ export type CaseStudy = {
 
 export const caseStudies: CaseStudy[] = [
   {
+    slug: "absa-bank",
+    client: "ABSA Bank",
+    index: "01",
+    tags: ["Media Buying", "EPL Sponsorship Activation", "Brand Strategy"],
+    region: "Tanzania",
+    summary:
+      "ABSA came to us with two challenges at once: squeeze more value out of their media spend in Tanzania, and turn an English Premier League sponsorship into something fans actually cared about. On the media side, we built a data-driven buying strategy across TV, radio, digital, and print. On the EPL side, we designed BTL activations built for match days — live screenings, interactive fan experiences, and giveaways — amplified with influencer-led social campaigns.",
+    image: "/media/absa-tanzania.jpg",
+    featured: true,
+  },
+  {
+    slug: "y9",
+    client: "Y9 Smart Bank",
+    index: "02",
+    tags: ["Product Launch", "Performance Marketing", "Consumer Promotion"],
+    region: "Tanzania",
+    summary:
+      "Y9 launched Tanzania as its first market — a microfinance challenger offering unique micro loans through an app anyone with an Android can use. We built the brand's launch marketing plan, then drove the Y9 App campaign with a hard acquisition target: 250,000 accounts with active micro loans. Focus groups sharpened the customer journey, and a performance-led go-to-market campaign kept every shilling accountable to sign-ups.",
+    image: "/media/y9-smart-bank.jpg",
+    results: [
+      "280,000 account sign-ups within 90 days of launch",
+      "161,000 accounts opened with full KYC",
+      "137,000+ customers received loans",
+      "Doubled the Q1 sales target and launched MNO partnerships",
+    ],
+  },
+  {
+    slug: "selcompesa",
+    client: "SelcomPesa",
+    index: "03",
+    tags: ["360 Marketing", "Awareness & Acquisition", "Content Development"],
+    region: "Tanzania",
+    summary:
+      "SelcomPesa operates in one of Tanzania's most competitive spaces — mobile financial services — where awareness alone is not enough to move the needle. Our engagement covers the full marketing spectrum: content development and social media management to above-the-line awareness campaigns and performance-driven acquisition activity. Every piece of content we produce is built with a dual purpose — to grow recognition of the brand and to convert that recognition into active users.",
+    image: "/media/selcom-pesa.jpg",
+  },
+  {
+    slug: "10bet-africa",
+    client: "10bet Africa",
+    index: "04",
+    tags: ["Pan-African GTM Strategy", "Sports Sponsorship"],
+    region: "9 Markets",
+    summary:
+      "10bet had ambitious plans to enter Africa across nine markets. They needed a partner who understood that Africa is not one market. We built the full Pan-African go-to-market playbook — market entry plans, financial projections, product mix recommendations, and a sponsorship strategy that put 10bet on the front of six premier league shirts across Zambia, Ghana, and Nigeria. We launched four markets by Q4 2022.",
+    image: "/media/10bet-sports.jpg",
+    results: [
+      "100,000+ players gained within the first quarter of operations",
+      "Front-of-shirt sponsorships with 6 premier league clubs across Africa",
+      "4 markets launched by Q4 2022",
+    ],
+  },
+  {
+    slug: "pigabet",
+    client: "PigaBet",
+    index: "05",
+    tags: ["360 Marketing", "Awareness & Acquisition", "Sports IP & Rights"],
+    region: "Tanzania",
+    summary:
+      "In Tanzania's fast-moving sports betting market, visibility is everything — but visibility without a credible sports identity only goes so far. Our work with PigaBet covers both fronts: a full 360-degree marketing programme across content, social media, and performance acquisition, alongside sports IP rights management and football club partnerships — identifying the right clubs, negotiating the deals, and building activation strategies that put the brand where fans are watching.",
+    image: "/media/pigabet-shinda-ndinga.jpeg",
+  },
+  {
+    slug: "mua-insurance",
+    client: "MUA Insurance",
+    index: "06",
+    tags: ["Corporate Communications", "Rebrand", "PR"],
+    region: "Tanzania",
+    summary:
+      "When Phoenix of Assurance Tanzania transitioned to MUA in 2023, they needed the market, media, and stakeholders to trust the new name from day one. We built and delivered a full 360-degree rebrand campaign covering every key touchpoint: the launch event, stakeholder engagement, corporate communications, and above-the-line activity to drive broad market awareness. The campaign was designed not just to announce the change, but to build confidence in it.",
+    image: "/media/mua-rebrand.jpg",
+    featured: true,
+  },
+  {
     slug: "chloride-exide",
     client: "Chloride Exide",
-    index: "02 / 22",
+    index: "07",
     tags: ["Digital Marketing", "Social Media", "Sales & Distribution"],
     region: "Tanzania",
     summary:
@@ -33,20 +106,9 @@ export const caseStudies: CaseStudy[] = [
     featured: true,
   },
   {
-    slug: "absa-bank",
-    client: "ABSA Bank",
-    index: "05 / 22",
-    tags: ["Media Buying", "EPL Sponsorship Activation", "Brand Strategy"],
-    region: "Tanzania",
-    summary:
-      "ABSA came to us with two challenges at once: squeeze more value out of their media spend in Tanzania, and turn an English Premier League sponsorship into something fans actually cared about. On the media side, we built a data-driven buying strategy across TV, radio, digital, and print. On the EPL side, we designed BTL activations built for match days — live screenings, interactive fan experiences, and giveaways — amplified with influencer-led social campaigns.",
-    image: "/media/absa-tanzania.jpg",
-    featured: true,
-  },
-  {
     slug: "showmax",
     client: "Showmax",
-    index: "04 / 22",
+    index: "08",
     tags: ["Market Entry", "ATL & BTL Campaigns", "Influencer Marketing"],
     region: "Tanzania",
     summary:
@@ -54,34 +116,9 @@ export const caseStudies: CaseStudy[] = [
     image: "/media/showmax-imefika.jpg",
   },
   {
-    slug: "mua-insurance",
-    client: "MUA Insurance",
-    index: "06 / 22",
-    tags: ["Corporate Communications", "Rebrand", "PR"],
-    region: "Tanzania",
-    summary:
-      "When Phoenix of Assurance Tanzania transitioned to MUA in 2023, they needed the market, media, and stakeholders to trust the new name from day one. We built and delivered a full 360-degree rebrand campaign covering every key touchpoint: the launch event, stakeholder engagement, corporate communications, and above-the-line activity to drive broad market awareness. The campaign was designed not just to announce the change, but to build confidence in it.",
-    image: "/media/mua-rebrand.jpg",
-  },
-  {
-    slug: "10bet-africa",
-    client: "10bet Africa",
-    index: "11 / 22",
-    tags: ["Pan-African GTM Strategy", "Sports Sponsorship"],
-    region: "9 Markets",
-    summary:
-      "10bet had ambitious plans to enter Africa across nine markets. They needed a partner who understood that Africa is not one market. We built the full Pan-African go-to-market playbook — market entry plans, financial projections, product mix recommendations, and a sponsorship strategy that put 10bet on the front of six premier league shirts across Zambia, Ghana, and Nigeria. We launched four markets by Q4 2022.",
-    image: "/media/10bet-sports.jpg",
-    results: [
-      "100,000+ players gained within the first quarter of operations",
-      "Front-of-shirt sponsorships with 6 premier league clubs across Africa",
-      "4 markets launched by Q4 2022",
-    ],
-  },
-  {
     slug: "africa-football-league",
     client: "Africa Football League",
-    index: "12 / 22",
+    index: "09",
     tags: ["Event Management", "Government Advisory", "Sports"],
     region: "East Africa",
     summary:
@@ -91,7 +128,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "yanga",
     client: "Young Africans SC (Yanga)",
-    index: "13 / 22",
+    index: "10",
     tags: ["Sports Marketing", "UNICEF Partnership", "Behaviour Change"],
     region: "Tanzania",
     summary:
@@ -106,49 +143,12 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "rumble-in-dar",
     client: "Rumble in Dar",
-    index: "14 / 22",
+    index: "11",
     tags: ["Sports IP", "Brand Activation", "Boxing"],
     region: "Tanzania",
     summary:
       "Rumble in Dar is not a client brief — it is a brand asset we created from scratch. Conceived and developed in-house by Jackson Group, the professional boxing series gives Tanzania a world-class sporting spectacle and gives sponsors one of the most powerful brand activation platforms on the continent. Each edition places the presenting sponsor's brand at the centre of an electrifying live event with worldwide broadcast reach and a tourism campaign that puts Dar es Salaam on the global map.",
     image: "/media/rumble-in-dar-1.jpg",
-    featured: true,
-  },
-  {
-    slug: "selcompesa",
-    client: "SelcomPesa",
-    index: "20 / 22",
-    tags: ["360 Marketing", "Awareness & Acquisition", "Content Development"],
-    region: "Tanzania",
-    summary:
-      "SelcomPesa operates in one of Tanzania's most competitive spaces — mobile financial services — where awareness alone is not enough to move the needle. Our engagement covers the full marketing spectrum: content development and social media management to above-the-line awareness campaigns and performance-driven acquisition activity. Every piece of content we produce is built with a dual purpose — to grow recognition of the brand and to convert that recognition into active users.",
-    image: "/media/selcom-pesa.jpg",
-  },
-  {
-    slug: "pigabet",
-    client: "PigaBet",
-    index: "22 / 22",
-    tags: ["360 Marketing", "Awareness & Acquisition", "Sports IP & Rights"],
-    region: "Tanzania",
-    summary:
-      "In Tanzania's fast-moving sports betting market, visibility is everything — but visibility without a credible sports identity only goes so far. Our work with PigaBet covers both fronts: a full 360-degree marketing programme across content, social media, and performance acquisition, alongside sports IP rights management and football club partnerships — identifying the right clubs, negotiating the deals, and building activation strategies that put the brand where fans are watching.",
-    image: "/media/pigabet-shinda-ndinga.jpeg",
-  },
-  {
-    slug: "y9",
-    client: "Y9 Smart Bank",
-    index: "01 / 22",
-    tags: ["Product Launch", "Performance Marketing", "Consumer Promotion"],
-    region: "Tanzania",
-    summary:
-      "Y9 launched Tanzania as its first market — a microfinance challenger offering unique micro loans through an app anyone with an Android can use. We built the brand's launch marketing plan, then drove the Y9 App campaign with a hard acquisition target: 250,000 accounts with active micro loans. Focus groups sharpened the customer journey, and a performance-led go-to-market campaign kept every shilling accountable to sign-ups.",
-    image: "/media/y9-smart-bank.jpg",
-    results: [
-      "280,000 account sign-ups within 90 days of launch",
-      "161,000 accounts opened with full KYC",
-      "137,000+ customers received loans",
-      "Doubled the Q1 sales target and launched MNO partnerships",
-    ],
   },
 ];
 

@@ -15,14 +15,15 @@ import { InteractiveSelector } from "@/components/ui/interactive-selector";
 // Expanding-panel showcase: real campaign assets where supplied; branded
 // placeholder tiles hold the rest until the client sends more visuals
 // (specs in IMAGE_SPECS.md).
+// Strategic work leads; boxing (Rumble in Dar) sits last per client feedback
 const showcase = [
-  { title: "Rumble in Dar", description: "Sports IP · Boxing", image: "/media/rumble-in-dar-1.jpg", href: "/work/rumble-in-dar" },
-  { title: "Showmax", description: "Market entry", image: "/media/showmax-imefika.jpg", href: "/work/showmax" },
+  { title: "ABSA Bank", description: "Banking · EPL activation", image: "/media/absa-tanzania.jpg", href: "/work/absa-bank" },
   { title: "Y9 Smart Bank", description: "Product launch", image: "/media/y9-smart-bank.jpg", href: "/work/y9" },
-  { title: "PigaBet", description: "360 marketing", image: "/media/pigabet-2.jpg", href: "/work/pigabet" },
-  { title: "Chloride Exide", description: "Digital · Distribution", image: "/media/chloride-exide.jpg", href: "/work/chloride-exide" },
-  { title: "MUA", description: "Rebrand", image: "/media/mua-rebrand.jpg", href: "/work/mua-insurance" },
   { title: "10bet Africa", description: "Pan-African GTM", image: "/media/10bet-sports.jpg", href: "/work/10bet-africa" },
+  { title: "MUA", description: "Insurance · Rebrand", image: "/media/mua-rebrand.jpg", href: "/work/mua-insurance" },
+  { title: "Chloride Exide", description: "Digital · Distribution", image: "/media/chloride-exide.jpg", href: "/work/chloride-exide" },
+  { title: "Showmax", description: "Market entry", image: "/media/showmax-imefika.jpg", href: "/work/showmax" },
+  { title: "Rumble in Dar", description: "Sports IP · Boxing", image: "/media/rumble-in-dar-1.jpg", href: "/work/rumble-in-dar" },
 ];
 
 export default function Home() {
@@ -93,8 +94,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured work — zoom-parallax showcase, then the three tiles the
-          client requested */}
+      {/* Services — below About Us per client feedback: each line inks in
+          with ember as it travels up the viewport */}
+      <section>
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 py-24 md:py-32 grid gap-12 lg:grid-cols-[1fr_2fr]">
+          <Reveal>
+            <span className="label-mono">[What we do]</span>
+          </Reveal>
+          <ServicesScroll services={services} />
+        </div>
+      </section>
+
+      {/* Featured work — strategic showcase, boxing last, then the three
+          featured tiles */}
       <section className="border-y border-ink/10 bg-[#f1efea] dark:bg-[#1a1918]">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 pt-24 md:pt-32">
           <div className="flex items-end justify-between gap-6">
@@ -136,17 +148,6 @@ export default function Home() {
           >
             All case studies →
           </Link>
-        </div>
-      </section>
-
-      {/* Services — scroll-driven: each line inks in with ember as it
-          travels up the viewport */}
-      <section>
-        <div className="mx-auto max-w-7xl px-5 sm:px-8 py-24 md:py-32 grid gap-12 lg:grid-cols-[1fr_2fr]">
-          <Reveal>
-            <span className="label-mono">[What we do]</span>
-          </Reveal>
-          <ServicesScroll services={services} />
         </div>
       </section>
 
