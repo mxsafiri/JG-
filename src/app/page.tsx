@@ -17,7 +17,7 @@ import { InteractiveSelector } from "@/components/ui/interactive-selector";
 // (specs in IMAGE_SPECS.md).
 // Strategic work leads; boxing (Rumble in Dar) sits last per client feedback
 const showcase = [
-  { title: "ABSA Bank", description: "Banking · EPL activation", image: "/media/absa-tanzania.jpg", href: "/work/absa-bank" },
+  { title: "SelcomPesa", description: "Fintech · 360 marketing", image: "/media/selcom-pesa.jpg", href: "/work/selcompesa" },
   { title: "Y9 Smart Bank", description: "Product launch", image: "/media/y9-smart-bank.jpg", href: "/work/y9" },
   { title: "10bet Africa", description: "Pan-African GTM", image: "/media/10bet-sports.jpg", href: "/work/10bet-africa" },
   { title: "MUA", description: "Insurance · Rebrand", image: "/media/mua-rebrand.jpg", href: "/work/mua-insurance" },
