@@ -12,7 +12,9 @@ export type CaseStudy = {
   summary: string;
   image?: string; // real campaign asset in /public/media, when available
   results?: string[]; // measurable outcomes, from the company profile
-  featured?: boolean; // the three homepage tiles requested in the feedback doc
+  featured?: boolean; // the three homepage tiles under the gallery
+  showcase?: boolean; // appears as a panel in the homepage gallery
+  galleryLabel?: string; // short line under the name in the gallery
 };
 
 export const caseStudies: CaseStudy[] = [
@@ -28,9 +30,21 @@ export const caseStudies: CaseStudy[] = [
     featured: true,
   },
   {
+    slug: "selcompesa",
+    client: "SelcomPesa",
+    index: "02",
+    tags: ["360 Marketing", "Awareness & Acquisition", "Content Development"],
+    region: "Tanzania",
+    summary:
+      "SelcomPesa operates in one of Tanzania's most competitive spaces — mobile financial services — where awareness alone is not enough to move the needle. Our engagement covers the full marketing spectrum: content development and social media management to above-the-line awareness campaigns and performance-driven acquisition activity. Every piece of content we produce is built with a dual purpose — to grow recognition of the brand and to convert that recognition into active users.",
+    image: "/media/selcom-pesa.jpg",
+    showcase: true,
+    galleryLabel: "Fintech · 360 marketing",
+  },
+  {
     slug: "y9",
     client: "Y9 Smart Bank",
-    index: "02",
+    index: "03",
     tags: ["Product Launch", "Performance Marketing", "Consumer Promotion"],
     region: "Tanzania",
     summary:
@@ -42,16 +56,8 @@ export const caseStudies: CaseStudy[] = [
       "137,000+ customers received loans",
       "Doubled the Q1 sales target and launched MNO partnerships",
     ],
-  },
-  {
-    slug: "selcompesa",
-    client: "SelcomPesa",
-    index: "03",
-    tags: ["360 Marketing", "Awareness & Acquisition", "Content Development"],
-    region: "Tanzania",
-    summary:
-      "SelcomPesa operates in one of Tanzania's most competitive spaces — mobile financial services — where awareness alone is not enough to move the needle. Our engagement covers the full marketing spectrum: content development and social media management to above-the-line awareness campaigns and performance-driven acquisition activity. Every piece of content we produce is built with a dual purpose — to grow recognition of the brand and to convert that recognition into active users.",
-    image: "/media/selcom-pesa.jpg",
+    showcase: true,
+    galleryLabel: "Product launch",
   },
   {
     slug: "10bet-africa",
@@ -67,6 +73,8 @@ export const caseStudies: CaseStudy[] = [
       "Front-of-shirt sponsorships with 6 premier league clubs across Africa",
       "4 markets launched by Q4 2022",
     ],
+    showcase: true,
+    galleryLabel: "Pan-African GTM",
   },
   {
     slug: "pigabet",
@@ -88,6 +96,8 @@ export const caseStudies: CaseStudy[] = [
       "When Phoenix of Assurance Tanzania transitioned to MUA in 2023, they needed the market, media, and stakeholders to trust the new name from day one. We built and delivered a full 360-degree rebrand campaign covering every key touchpoint: the launch event, stakeholder engagement, corporate communications, and above-the-line activity to drive broad market awareness. The campaign was designed not just to announce the change, but to build confidence in it.",
     image: "/media/mua-rebrand.jpg",
     featured: true,
+    showcase: true,
+    galleryLabel: "Insurance · Rebrand",
   },
   {
     slug: "chloride-exide",
@@ -104,6 +114,8 @@ export const caseStudies: CaseStudy[] = [
       "Maintained 60% market share and No.1 top-of-mind awareness",
     ],
     featured: true,
+    showcase: true,
+    galleryLabel: "Digital · Distribution",
   },
   {
     slug: "showmax",
@@ -114,6 +126,8 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "Entering a competitive streaming market is hard enough — doing it in a way that feels genuinely local is harder. When Showmax launched in Tanzania, we built and executed their full market entry strategy: ATL and BTL campaigns to drive awareness at scale, localised content promotions calibrated to Tanzanian tastes, and a network of influencer partnerships and grassroots activations to build word-of-mouth that advertising can't buy. Every touchpoint was designed to make Showmax feel like it belonged here from day one.",
     image: "/media/showmax-imefika.jpg",
+    showcase: true,
+    galleryLabel: "Market entry",
   },
   {
     slug: "africa-football-league",
@@ -149,6 +163,8 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "Rumble in Dar is not a client brief — it is a brand asset we created from scratch. Conceived and developed in-house by Jackson Group, the professional boxing series gives Tanzania a world-class sporting spectacle and gives sponsors one of the most powerful brand activation platforms on the continent. Each edition places the presenting sponsor's brand at the centre of an electrifying live event with worldwide broadcast reach and a tourism campaign that puts Dar es Salaam on the global map.",
     image: "/media/rumble-in-dar-1.jpg",
+    showcase: true,
+    galleryLabel: "Sports IP · Boxing",
   },
 ];
 

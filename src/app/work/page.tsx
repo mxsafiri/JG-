@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { caseStudies } from "@/data/caseStudies";
+import { getCases } from "@/data/getCases";
 import CaseCard from "@/components/CaseCard";
 import CtaBanner from "@/components/CtaBanner";
 import MaskReveal from "@/components/anim/MaskReveal";
@@ -12,7 +12,10 @@ export const metadata: Metadata = {
     "22 client stories. Measurable impact across Africa. Case studies from Jackson Group.",
 };
 
-export default function WorkPage() {
+export const revalidate = 60;
+
+export default async function WorkPage() {
+  const caseStudies = await getCases();
   return (
     <>
       <section>

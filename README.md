@@ -42,6 +42,29 @@ Navigation is exactly as requested in the client's feedback document:
 - [ ] The remaining 10 of 22 case studies, if wanted on the site
 - [ ] Photography per `IMAGE_SPECS.md`
 
+## Content editing (CMS)
+
+Case studies are editable by the client through Sanity (free tier), with the
+editor embedded at **`/studio`**. Until Sanity is connected the site serves
+the built-in content from `src/data/caseStudies.ts` — nothing breaks.
+
+One-time setup (~10 minutes):
+
+1. Create a project at [sanity.io](https://www.sanity.io/) (free plan) —
+   note the **Project ID**, create a dataset named `production`
+2. In Vercel → Project → Settings → Environment Variables, add
+   `NEXT_PUBLIC_SANITY_PROJECT_ID` = your project id (and optionally
+   `NEXT_PUBLIC_SANITY_DATASET` = `production`), then redeploy
+3. In [sanity.io/manage](https://www.sanity.io/manage) → API → CORS origins,
+   add the site URL (e.g. `https://jg-one.vercel.app`) with credentials
+4. Import the existing 11 case studies (repo root):
+   `npx sanity dataset import sanity-seed.ndjson production --project <PROJECT_ID>`
+5. Invite Jackson Group editors under Members (role: Editor)
+
+The client then edits at `https://<site>/studio` — text, tags, results,
+images, ordering, and homepage flags. Changes go live within a minute of
+pressing Publish (ISR revalidate: 60s), no redeploy needed.
+
 ## Deploying
 
 Push to Vercel (zero config) — or `npm run build && npm start` on any Node host.

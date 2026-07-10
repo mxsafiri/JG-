@@ -2,20 +2,25 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { caseStudies, getCase } from "@/data/caseStudies";
+import { getCases, getCase } from "@/data/getCases";
 import CtaBanner from "@/components/CtaBanner";
 import MaskReveal from "@/components/anim/MaskReveal";
 import Reveal from "@/components/anim/Reveal";
 
 type Props = { params: Promise<{ slug: string }> };
 
-export function generateStaticParams() {
-  return caseStudies.map((cs) => ({ slug: cs.slug }));
+// New CMS entries get pages on demand; edits show within a minute
+export const revalidate = 60;
+export const dynamicParams = true;
+
+export async function generateStaticParams() {
+  const cases = await getCases();
+  return cases.map((cs) => ({ slug: cs.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const cs = getCase(slug);
+  const cs = await getCase(slug);
   if (!cs) return {};
   return {
     title: `${cs.client} — Case Study`,
@@ -25,7 +30,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function CaseStudyPage({ params }: Props) {
   const { slug } = await params;
-  const cs = getCase(slug);
+  const caseStudies = await getCases();
+  const cs = caseStudies.find((c) => c.slug === slug);
   if (!cs) notFound();
 
   const i = caseStudies.findIndex((c) => c.slug === cs.slug);

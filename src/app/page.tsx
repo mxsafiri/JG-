@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { featuredCases } from "@/data/caseStudies";
+import { getCases } from "@/data/getCases";
 import { clients } from "@/data/clients";
 import { services, site, stats } from "@/data/site";
 import CaseCard from "@/components/CaseCard";
@@ -15,18 +15,23 @@ import { InteractiveSelector } from "@/components/ui/interactive-selector";
 // Expanding-panel showcase: real campaign assets where supplied; branded
 // placeholder tiles hold the rest until the client sends more visuals
 // (specs in IMAGE_SPECS.md).
-// Strategic work leads; boxing (Rumble in Dar) sits last per client feedback
-const showcase = [
-  { title: "SelcomPesa", description: "Fintech · 360 marketing", image: "/media/selcom-pesa.jpg", href: "/work/selcompesa" },
-  { title: "Y9 Smart Bank", description: "Product launch", image: "/media/y9-smart-bank.jpg", href: "/work/y9" },
-  { title: "10bet Africa", description: "Pan-African GTM", image: "/media/10bet-sports.jpg", href: "/work/10bet-africa" },
-  { title: "MUA", description: "Insurance · Rebrand", image: "/media/mua-rebrand.jpg", href: "/work/mua-insurance" },
-  { title: "Chloride Exide", description: "Digital · Distribution", image: "/media/chloride-exide.jpg", href: "/work/chloride-exide" },
-  { title: "Showmax", description: "Market entry", image: "/media/showmax-imefika.jpg", href: "/work/showmax" },
-  { title: "Rumble in Dar", description: "Sports IP · Boxing", image: "/media/rumble-in-dar-1.jpg", href: "/work/rumble-in-dar" },
-];
+// Content comes from the CMS when connected (falls back to built-in data).
+// Gallery = cases marked "showcase", in display order — strategic first,
+// boxing last. Tiles = cases marked "featured".
+export const revalidate = 60;
 
-export default function Home() {
+export default async function Home() {
+  const cases = await getCases();
+  const featuredCases = cases.filter((c) => c.featured);
+  const showcase = cases
+    .filter((c) => c.showcase && c.image)
+    .map((c) => ({
+      title: c.client,
+      description: c.galleryLabel ?? c.tags[0] ?? "",
+      image: c.image as string,
+      href: `/work/${c.slug}`,
+    }));
+
   return (
     <>
       {/* Hero — light greyscale canvas with the client's B&W Dar es Salaam
