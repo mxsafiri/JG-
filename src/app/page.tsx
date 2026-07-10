@@ -15,11 +15,8 @@ import { InteractiveSelector } from "@/components/ui/interactive-selector";
 // Expanding-panel showcase: real campaign assets where supplied; branded
 // placeholder tiles hold the rest until the client sends more visuals
 // (specs in IMAGE_SPECS.md).
-// Content comes from the CMS when connected (falls back to built-in data).
-// Gallery = cases marked "showcase", in display order — strategic first,
-// boxing last. Tiles = cases marked "featured".
-export const revalidate = 60;
-
+// Gallery = cases marked "showcase" in display order (strategic first,
+// boxing last); tiles = cases marked "featured". Content: content/cases.json.
 export default async function Home() {
   const cases = await getCases();
   const featuredCases = cases.filter((c) => c.featured);

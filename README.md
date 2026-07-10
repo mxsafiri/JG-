@@ -42,28 +42,28 @@ Navigation is exactly as requested in the client's feedback document:
 - [ ] The remaining 10 of 22 case studies, if wanted on the site
 - [ ] Photography per `IMAGE_SPECS.md`
 
-## Content editing (CMS)
+## Content editing portal (/admin)
 
-Case studies are editable by the client through Sanity (free tier), with the
-editor embedded at **`/studio`**. Until Sanity is connected the site serves
-the built-in content from `src/data/caseStudies.ts` — nothing breaks.
+Jackson Group edits case studies at **`/admin`** — no third-party CMS, no
+extra platform, no fees. Content lives in `content/cases.json`; the portal
+commits edits (and uploaded images) straight to this repo via the GitHub
+API, and Vercel redeploys automatically (~2 min to live).
 
-One-time setup (~10 minutes):
+They can edit: story text, tags, region, results ("the numbers"), the
+campaign image, display order (↑↓), homepage tile/gallery flags, and add or
+remove case studies.
 
-1. Create a project at [sanity.io](https://www.sanity.io/) (free plan) —
-   note the **Project ID**, create a dataset named `production`
-2. In Vercel → Project → Settings → Environment Variables, add
-   `NEXT_PUBLIC_SANITY_PROJECT_ID` = your project id (and optionally
-   `NEXT_PUBLIC_SANITY_DATASET` = `production`), then redeploy
-3. In [sanity.io/manage](https://www.sanity.io/manage) → API → CORS origins,
-   add the site URL (e.g. `https://jg-one.vercel.app`) with credentials
-4. Import the existing 11 case studies (repo root):
-   `npx sanity dataset import sanity-seed.ndjson production --project <PROJECT_ID>`
-5. Invite Jackson Group editors under Members (role: Editor)
+One-time setup — two Vercel environment variables:
 
-The client then edits at `https://<site>/studio` — text, tags, results,
-images, ordering, and homepage flags. Changes go live within a minute of
-pressing Publish (ISR revalidate: 60s), no redeploy needed.
+1. `ADMIN_PASSWORD` — the password you share with Jackson Group's editors
+2. `GITHUB_TOKEN` — a fine-grained personal access token
+   (github.com → Settings → Developer settings → Fine-grained tokens):
+   Repository access = only this repo, Permissions → Contents =
+   **Read and write**. Nothing else.
+
+Optional: `GITHUB_REPO` (default `mxsafiri/JG-`), `GITHUB_BRANCH`
+(default `main`). Redeploy after setting the variables, then share
+`https://<site>/admin` and the password.
 
 ## Deploying
 

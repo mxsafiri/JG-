@@ -1,10 +1,5 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  images: {
-    // Campaign images served from the Sanity CDN once the CMS is connected
-    remotePatterns: [{ protocol: "https", hostname: "cdn.sanity.io" }],
-  },
-};
+const nextConfig: NextConfig = {};
 
 export default nextConfig;

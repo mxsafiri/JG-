@@ -9,10 +9,6 @@ import Reveal from "@/components/anim/Reveal";
 
 type Props = { params: Promise<{ slug: string }> };
 
-// New CMS entries get pages on demand; edits show within a minute
-export const revalidate = 60;
-export const dynamicParams = true;
-
 export async function generateStaticParams() {
   const cases = await getCases();
   return cases.map((cs) => ({ slug: cs.slug }));

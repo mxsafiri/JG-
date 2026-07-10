@@ -12,8 +12,6 @@ export const metadata: Metadata = {
     "22 client stories. Measurable impact across Africa. Case studies from Jackson Group.",
 };
 
-export const revalidate = 60;
-
 export default async function WorkPage() {
   const caseStudies = await getCases();
   return (
