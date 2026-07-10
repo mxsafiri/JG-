@@ -124,8 +124,11 @@ export default function AdminPage() {
     await load();
   }
 
+  // The portal is a tool, not a brand surface — pin it to the light palette
+  // so it stays readable regardless of the visitor theme toggle.
   if (stage !== "edit") {
     return (
+      <div className="theme-light bg-bone text-ink min-h-screen">
       <div className="mx-auto max-w-sm px-6 py-24">
         <span className="label-mono">[Admin]</span>
         <h1 className="display text-4xl mt-3">Content portal</h1>
@@ -148,10 +151,12 @@ export default function AdminPage() {
           {error && <p className="text-sm text-ember">{error}</p>}
         </form>
       </div>
+      </div>
     );
   }
 
   return (
+    <div className="theme-light bg-bone text-ink min-h-screen">
     <div className="mx-auto max-w-3xl px-5 sm:px-8 py-16">
       <span className="label-mono">[Admin]</span>
       <h1 className="display text-4xl mt-3">Case studies</h1>
@@ -257,6 +262,7 @@ export default function AdminPage() {
 
       {notice && <p className="mt-4 text-sm text-ink/80">{notice}</p>}
       {error && <p className="mt-4 text-sm text-ember">{error}</p>}
+    </div>
     </div>
   );
 }
