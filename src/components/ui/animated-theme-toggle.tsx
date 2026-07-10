@@ -13,8 +13,10 @@ import { motion, useMotionValue, useTransform } from "motion/react";
 export function AnimatedThemeToggle({ className = "" }: { className?: string }) {
   const [isDark, setIsDark] = useState(false);
 
-  // Sync with whatever the boot script decided
+  // Sync with whatever the boot script decided. One-time DOM read on mount:
+  // the class is set before hydration, so state must be read, not assumed.
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsDark(document.documentElement.classList.contains("dark"));
   }, []);
 
