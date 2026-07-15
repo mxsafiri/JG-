@@ -22,7 +22,14 @@ export async function readFile(path: string): Promise<{ content: string; sha: st
     headers: headers(),
     cache: "no-store",
   });
-  if (!res.ok) throw new Error(`GitHub read failed (${res.status})`);
+  if (!res.ok) {
+    if (res.status === 403 || res.status === 404) {
+      throw new Error(
+        "Couldn't load content from GitHub. The access token needs Contents: Read and write permission on this repository.",
+      );
+    }
+    throw new Error(`GitHub read failed (${res.status})`);
+  }
   const data = await res.json();
   return {
     content: Buffer.from(data.content, "base64").toString("utf8"),
@@ -47,7 +54,17 @@ export async function writeFile(
     }),
   });
   if (!res.ok) {
+    if (res.status === 403 || res.status === 404) {
+      throw new Error(
+        "Save was blocked by GitHub. The access token needs Contents: Read and write permission on this repository. Ask your developer to check GITHUB_TOKEN.",
+      );
+    }
+    if (res.status === 409) {
+      throw new Error(
+        "Someone else saved changes a moment ago. Refresh the page and re-apply your edits.",
+      );
+    }
     const body = await res.text();
-    throw new Error(`GitHub write failed (${res.status}): ${body.slice(0, 200)}`);
+    throw new Error(`Save failed (${res.status}): ${body.slice(0, 160)}`);
   }
 }
